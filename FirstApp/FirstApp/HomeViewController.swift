@@ -8,7 +8,7 @@
 import UIKit
 
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class HomeViewController: UIViewController {
     
     let cellIdentifier = "RowCell"
     
@@ -26,25 +26,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableview.delegate = self
     }
     
-    //MARK: - Actions
-    
-    @IBAction func showAlert() {
-      let alert = UIAlertController(
-        title: "This is player.",
-        message: "He is good.",
-        preferredStyle: .alert)
+}
 
-      let action = UIAlertAction(
-        title: "OK",
-        style: .default,
-        handler: nil)
-
-      alert.addAction(action)
-      present(alert, animated: true, completion: nil)
-    }
-
+extension HomeViewController: UITableViewDelegate {
     
-    
+}
+
+extension HomeViewController: UITableViewDataSource {
     //MARK: - Table View Cells
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -52,11 +40,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "RowCell", for: indexPath) as! AcinaMalaCelijaTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "RowCell", for: indexPath) as! ItemsTableViewCell
         
         let player = players[indexPath.row]
-        
-        configure(for: cell, with: player)
         
         return cell
     }
@@ -64,17 +50,4 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
     }
-    
-    //MARK: - Configure methods
-    
-    func configure (
-      for cell: UITableViewCell,
-      with item: Item
-    ) {
-      let label = cell.viewWithTag(1000) as! AcinaMalaCelijaTableViewCell
-        label.title?.text = item.title
-        label.subtitle?.text = item.subtitle
-        label.pictureOfPlayer?.image = UIImage(named: item.imageName)
-    }
-    
 }
