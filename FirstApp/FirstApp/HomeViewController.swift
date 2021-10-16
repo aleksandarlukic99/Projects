@@ -12,8 +12,8 @@ class HomeViewController: UIViewController {
     
     let cellIdentifier = "RowCell"
     
-    
     @IBOutlet weak var tableview: UITableView!
+    weak var delegate: ItemsTableViewCell!
     
     let players = [
         Item(title: "Nemanja Bjelica", subtitle: "Playing in Golden State Warriors\nHeight: 2.08m\nBorn in: 9 May 1988. (age: 33)", imageName: "Bjelica"),
@@ -50,4 +50,6 @@ extension HomeViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
     }
+    
+    
 }
