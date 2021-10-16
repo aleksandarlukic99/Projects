@@ -68,7 +68,7 @@ DASDASDA</string>
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                                     <connections>
-                                                        <action selector="showAlert" destination="ae0-08-6fJ" eventType="touchUpInside" id="c7l-kJ-22w"/>
+                                                        <action selector="showAlert" destination="ae0-08-6fJ" eventType="touchUpInside" id="1gO-2g-aDh"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -88,10 +88,11 @@ DASDASDA</string>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="alertButton" destination="xjR-Ag-aic" id="AE6-2a-nxk"/>
+                                            <outlet property="alertButton" destination="xjR-Ag-aic" id="Fyp-pM-Rm8"/>
                                             <outlet property="playerPictureImageView" destination="7ZJ-Wa-HfA" id="1Re-jq-mHc"/>
                                             <outlet property="subtitleLabel" destination="9Nw-Ql-eR2" id="fNm-UW-PGa"/>
                                             <outlet property="titleLabel" destination="v4u-eA-NNC" id="yh2-us-txc"/>
+                                            <segue destination="CMU-e6-V15" kind="show" identifier="ShowPlayer" id="sdt-Dk-60r"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -108,6 +109,36 @@ DASDASDA</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="959.20000000000005" y="68.815592203898049"/>
+        </scene>
+        <!--Player-->
+        <scene sceneID="iSt-dn-Ya3">
+            <objects>
+                <viewController id="CMU-e6-V15" customClass="DetailsViewController" customModule="FirstApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7kI-Sw-Ann">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player details" lineBreakMode="tailTruncation" numberOfLines="50" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0W7-ZB-b8A">
+                                <rect key="frame" x="8" y="52" width="359" height="20.5"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="S3B-OE-ues"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="0W7-ZB-b8A" firstAttribute="leading" secondItem="S3B-OE-ues" secondAttribute="leading" constant="8" id="JBe-dI-tn9"/>
+                            <constraint firstItem="S3B-OE-ues" firstAttribute="trailing" secondItem="0W7-ZB-b8A" secondAttribute="trailing" constant="8" id="a8t-YF-bRr"/>
+                            <constraint firstItem="0W7-ZB-b8A" firstAttribute="top" secondItem="S3B-OE-ues" secondAttribute="top" constant="8" id="wEr-bc-uBk"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Player" largeTitleDisplayMode="never" id="WaP-eJ-3Yg"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pzb-lG-or0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1741.5999999999999" y="68.815592203898049"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="xaK-IU-pDK">

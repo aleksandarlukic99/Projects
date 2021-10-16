@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol ItemsTableViewCellDelegate: AnyObject {
+    
+}
+
 class ItemsTableViewCell: UITableViewCell {
     
     @IBOutlet private var titleLabel: UILabel!
@@ -24,24 +28,22 @@ class ItemsTableViewCell: UITableViewCell {
     
     @IBAction func showAlert() {
         let alert = UIAlertController(
-          title: "This is player.",
-          message: "He is good.",
-          preferredStyle: .alert)
-
+            title: "Igrac",
+            message: "Biografija",
+            preferredStyle: .alert)
         let action = UIAlertAction(
-          title: "OK",
-          style: .default,
-          handler: nil)
-
+            title: "ok",
+            style: .default,
+            handler: nil)
         alert.addAction(action)
     }
     
     //MARK: - Configure
     
-    func configure(for cell: ItemsTableViewCell, with item: Item) {
-        cell.titleLabel?.text = item.title
-        cell.subtitleLabel?.text = item.subtitle
-        cell.playerPictureImageView?.image = UIImage(named: item.imageName)
+    func configure(item: Item) {
+        self.titleLabel?.text = item.title
+        self.subtitleLabel?.text = item.subtitle
+        self.playerPictureImageView?.image = UIImage(named: item.imageName)
     }
  
 }

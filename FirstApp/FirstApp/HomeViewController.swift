@@ -13,9 +13,8 @@ class HomeViewController: UIViewController {
     let cellIdentifier = "RowCell"
     
     @IBOutlet weak var tableview: UITableView!
-    weak var delegate: ItemsTableViewCell!
     
-    let players = [
+    var players = [
         Item(title: "Nemanja Bjelica", subtitle: "Playing in Golden State Warriors\nHeight: 2.08m\nBorn in: 9 May 1988. (age: 33)", imageName: "Bjelica"),
         Item(title: "Luka Doncic", subtitle: "Playing in Dallas Mavericks\nHeight: 2.01 m\nBorn in: 28 February 1999. (age: 22)", imageName: "Doncic"),
         Item(title: "Paul George", subtitle: "Playing in Los Angeles Clippers\nHeight: 2.03m\nBorn in: 2 May 1990. (age: 31)", imageName: "George")]
@@ -40,9 +39,10 @@ extension HomeViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "RowCell", for: indexPath) as! ItemsTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! ItemsTableViewCell
         
         let player = players[indexPath.row]
+        cell.configure(item: player)
         
         return cell
     }
