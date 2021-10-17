@@ -66,12 +66,12 @@
 				2CE9F932271855E0003B7456 /* SceneDelegate.swift */,
 				2CE9F934271855E0003B7456 /* HomeViewController.swift */,
 				2CE9F946271892F9003B7456 /* ItemsTableViewCell.swift */,
+				2CE9F948271B78C6003B7456 /* DetailsViewController.swift */,
 				2CE9F94427187A87003B7456 /* Item.swift */,
 				2CE9F936271855E0003B7456 /* Main.storyboard */,
 				2CE9F939271855E2003B7456 /* Assets.xcassets */,
 				2CE9F93B271855E2003B7456 /* LaunchScreen.storyboard */,
 				2CE9F93E271855E2003B7456 /* Info.plist */,
-				2CE9F948271B78C6003B7456 /* DetailsViewController.swift */,
 			);
 			path = FirstApp;
 			sourceTree = "<group>";

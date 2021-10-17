@@ -18,6 +18,7 @@ class ItemsTableViewCell: UITableViewCell {
     @IBOutlet private var alertButton: UIButton!
     @IBOutlet private var playerPictureImageView: UIImageView!
     
+    weak var delegate: HomeViewController?
     
     override func awakeFromNib() {
         playerPictureImageView.layer.cornerRadius = (playerPictureImageView.frame.width / 2)
@@ -36,6 +37,7 @@ class ItemsTableViewCell: UITableViewCell {
             style: .default,
             handler: nil)
         alert.addAction(action)
+        delegate?.present(alert, animated: true, completion: nil)
     }
     
     //MARK: - Configure
@@ -47,4 +49,5 @@ class ItemsTableViewCell: UITableViewCell {
     }
  
 }
+
 

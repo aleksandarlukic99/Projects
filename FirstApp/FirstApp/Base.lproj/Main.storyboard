@@ -92,7 +92,6 @@ DASDASDA</string>
                                             <outlet property="playerPictureImageView" destination="7ZJ-Wa-HfA" id="1Re-jq-mHc"/>
                                             <outlet property="subtitleLabel" destination="9Nw-Ql-eR2" id="fNm-UW-PGa"/>
                                             <outlet property="titleLabel" destination="v4u-eA-NNC" id="yh2-us-txc"/>
-                                            <segue destination="CMU-e6-V15" kind="show" identifier="ShowPlayer" id="sdt-Dk-60r"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -104,6 +103,7 @@ DASDASDA</string>
                     <navigationItem key="navigationItem" title="NBA Players" id="TqX-lC-noL"/>
                     <connections>
                         <outlet property="tableview" destination="ghL-xW-7Ay" id="qTP-Qh-QGG"/>
+                        <segue destination="CMU-e6-V15" kind="show" identifier="ShowPlayer" id="CHJ-OU-C6r"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -135,6 +135,9 @@ DASDASDA</string>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Player" largeTitleDisplayMode="never" id="WaP-eJ-3Yg"/>
+                    <connections>
+                        <outlet property="fullSubtitleLabel" destination="0W7-ZB-b8A" id="kwt-mP-DRp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pzb-lG-or0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

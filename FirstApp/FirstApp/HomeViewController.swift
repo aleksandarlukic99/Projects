@@ -15,9 +15,9 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var tableview: UITableView!
     
     var players = [
-        Item(title: "Nemanja Bjelica", subtitle: "Playing in Golden State Warriors\nHeight: 2.08m\nBorn in: 9 May 1988. (age: 33)", imageName: "Bjelica"),
-        Item(title: "Luka Doncic", subtitle: "Playing in Dallas Mavericks\nHeight: 2.01 m\nBorn in: 28 February 1999. (age: 22)", imageName: "Doncic"),
-        Item(title: "Paul George", subtitle: "Playing in Los Angeles Clippers\nHeight: 2.03m\nBorn in: 2 May 1990. (age: 31)", imageName: "George")]
+        Item(title: "Nemanja Bjelica", subtitle: "Playing in Golden State Warriors\nHeight: 2.08m\nBorn in: 9 May 1988. (age: 33)\nWeight: 106kg\nCareer overall statistics: Points: 7.9, Assists: 1.8, Rebounds: 4.6.", imageName: "Bjelica"),
+        Item(title: "Luka Doncic", subtitle: "Playing in Dallas Mavericks\nHeight: 2.01 m\nBorn in: 28 February 1999. (age: 22)\nWeight: 105kg\nCareer overall statistics: Points: 25.7, Assists: 7.7, Rebounds: 8.4.", imageName: "Doncic"),
+        Item(title: "Paul George", subtitle: "Playing in Los Angeles Clippers\nHeight: 2.03m\nBorn in: 2 May 1990. (age: 31)\nWeight: 100kg\nCareer overall statistics: Points: 20.2, Assists: 3.5, Rebounds: 6.4.", imageName: "George")]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,7 +49,17 @@ extension HomeViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        let playerList = players[indexPath.row]
+          performSegue(
+            withIdentifier: "ShowPlayer",
+            sender: playerList)
     }
     
-    
+    //MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowPlayer" {
+            let playerList = segue.destination as! DetailsViewController
+            playerList.item = sender as? Item
+        }
+    }
 }
