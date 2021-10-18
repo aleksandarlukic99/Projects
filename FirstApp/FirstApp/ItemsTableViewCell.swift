@@ -18,8 +18,6 @@ class ItemsTableViewCell: UITableViewCell {
     @IBOutlet private var alertButton: UIButton!
     @IBOutlet private var playerPictureImageView: UIImageView!
     
-    weak var delegate: HomeViewController?
-    
     override func awakeFromNib() {
         playerPictureImageView.layer.cornerRadius = (playerPictureImageView.frame.width / 2)
         playerPictureImageView.layer.masksToBounds = true
@@ -29,15 +27,15 @@ class ItemsTableViewCell: UITableViewCell {
     
     @IBAction func showAlert() {
         let alert = UIAlertController(
-            title: "Igrac",
-            message: "Biografija",
+            title: "Player",
+            message: "Biography",
             preferredStyle: .alert)
         let action = UIAlertAction(
             title: "ok",
             style: .default,
             handler: nil)
         alert.addAction(action)
-        delegate?.present(alert, animated: true, completion: nil)
+        self.window?.rootViewController?.present(alert, animated: true, completion: nil)
     }
     
     //MARK: - Configure
