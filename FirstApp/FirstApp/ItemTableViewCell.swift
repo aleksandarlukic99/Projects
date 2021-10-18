@@ -7,8 +7,8 @@
 
 import UIKit
 
-protocol ItemsTableViewCellDelegate: AnyObject {
-    
+protocol ItemsTableViewCellDelegate {
+    func buttonPress(_ cell: ItemsTableViewCell)
 }
 
 class ItemsTableViewCell: UITableViewCell {
@@ -18,6 +18,9 @@ class ItemsTableViewCell: UITableViewCell {
     @IBOutlet private var alertButton: UIButton!
     @IBOutlet private var playerPictureImageView: UIImageView!
     
+    var item: Item!
+    var delegate: ItemsTableViewCellDelegate?
+    
     override func awakeFromNib() {
         playerPictureImageView.layer.cornerRadius = (playerPictureImageView.frame.width / 2)
         playerPictureImageView.layer.masksToBounds = true
@@ -25,17 +28,8 @@ class ItemsTableViewCell: UITableViewCell {
     
     //MARK: - Actions
     
-    @IBAction func showAlert() {
-        let alert = UIAlertController(
-            title: "Player",
-            message: "Biography",
-            preferredStyle: .alert)
-        let action = UIAlertAction(
-            title: "ok",
-            style: .default,
-            handler: nil)
-        alert.addAction(action)
-        self.window?.rootViewController?.present(alert, animated: true, completion: nil)
+    @IBAction func showAlert(_ sender: Any) {
+        self.delegate?.buttonPress(self)
     }
     
     //MARK: - Configure
@@ -45,7 +39,7 @@ class ItemsTableViewCell: UITableViewCell {
         self.subtitleLabel?.text = item.subtitle
         self.playerPictureImageView?.image = UIImage(named: item.imageName)
     }
- 
+    
 }
 
 

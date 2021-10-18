@@ -16,9 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ghL-xW-7Ay">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ghL-xW-7Ay">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" tag="1000" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="RowCell" rowHeight="249" id="ae0-08-6fJ" customClass="ItemsTableViewCell" customModule="FirstApp" customModuleProvider="target">
@@ -99,6 +98,12 @@ DASDASDA</string>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ghL-xW-7Ay" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Ky3-jJ-VFd"/>
+                            <constraint firstItem="ghL-xW-7Ay" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="L7A-t9-f2c"/>
+                            <constraint firstItem="ghL-xW-7Ay" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="t3q-DS-UHH"/>
+                            <constraint firstItem="ghL-xW-7Ay" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ykt-gE-hrI"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="NBA Players" id="TqX-lC-noL"/>
                     <connections>

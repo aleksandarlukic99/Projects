@@ -63,3 +63,21 @@ extension HomeViewController: UITableViewDataSource {
         }
     }
 }
+
+extension HomeViewController: ItemsTableViewCellDelegate {
+    func buttonPress(_ cell: ItemsTableViewCell) {
+        cell.delegate = self
+        let indexPath = IndexPath()
+        let player = players[indexPath.row]
+        let alert = UIAlertController(
+            title: player.title,
+            message: player.subtitle,
+            preferredStyle: .alert)
+        let action = UIAlertAction(
+            title: "ok",
+            style: .default,
+            handler: nil)
+        alert.addAction(action)
+        self.present(alert, animated: true, completion: nil)
+    }
+}
