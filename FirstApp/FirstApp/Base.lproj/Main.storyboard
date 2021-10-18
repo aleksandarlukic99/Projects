@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" tag="1000" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="RowCell" rowHeight="249" id="ae0-08-6fJ" customClass="ItemsTableViewCell" customModule="FirstApp" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" tag="1000" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="RowCell" rowHeight="249" id="ae0-08-6fJ" customClass="ItemTableViewCell" customModule="FirstApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="375" height="249"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ae0-08-6fJ" id="pqn-0b-yfc">

@@ -39,10 +39,11 @@ extension HomeViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! ItemsTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! ItemTableViewCell
         
         let player = players[indexPath.row]
         cell.configure(item: player)
+        cell.delegate = self
         
         return cell
     }
@@ -64,20 +65,22 @@ extension HomeViewController: UITableViewDataSource {
     }
 }
 
-extension HomeViewController: ItemsTableViewCellDelegate {
-    func buttonPress(_ cell: ItemsTableViewCell) {
-        cell.delegate = self
-        let indexPath = IndexPath()
-        let player = players[indexPath.row]
+extension HomeViewController: ItemTableViewCellDelegate {
+    func itemCellDidTapButton(_ cell: ItemTableViewCell) {
+        let indexPath = tableview.indexPath(for: cell)
+        let player = players[indexPath!.row]
         let alert = UIAlertController(
             title: player.title,
             message: player.subtitle,
             preferredStyle: .alert)
         let action = UIAlertAction(
-            title: "ok",
+            title: "OK",
             style: .default,
             handler: nil)
         alert.addAction(action)
         self.present(alert, animated: true, completion: nil)
+        cell.delegate = self
     }
+    
 }
+

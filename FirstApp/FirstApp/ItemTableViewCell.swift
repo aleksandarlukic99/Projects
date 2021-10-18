@@ -7,11 +7,11 @@
 
 import UIKit
 
-protocol ItemsTableViewCellDelegate {
-    func buttonPress(_ cell: ItemsTableViewCell)
+protocol ItemTableViewCellDelegate: AnyObject {
+    func itemCellDidTapButton(_ cell: ItemTableViewCell)
 }
 
-class ItemsTableViewCell: UITableViewCell {
+class ItemTableViewCell: UITableViewCell {
     
     @IBOutlet private var titleLabel: UILabel!
     @IBOutlet private var subtitleLabel: UILabel!
@@ -19,7 +19,7 @@ class ItemsTableViewCell: UITableViewCell {
     @IBOutlet private var playerPictureImageView: UIImageView!
     
     var item: Item!
-    var delegate: ItemsTableViewCellDelegate?
+    var delegate: ItemTableViewCellDelegate?
     
     override func awakeFromNib() {
         playerPictureImageView.layer.cornerRadius = (playerPictureImageView.frame.width / 2)
@@ -28,8 +28,8 @@ class ItemsTableViewCell: UITableViewCell {
     
     //MARK: - Actions
     
-    @IBAction func showAlert(_ sender: Any) {
-        self.delegate?.buttonPress(self)
+    @IBAction func showAlert() {
+        self.delegate?.itemCellDidTapButton(self)
     }
     
     //MARK: - Configure
