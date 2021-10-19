@@ -16,6 +16,7 @@
 		2CE9F94527187A87003B7456 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE9F94427187A87003B7456 /* Item.swift */; };
 		2CE9F947271892FA003B7456 /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE9F946271892F9003B7456 /* ItemTableViewCell.swift */; };
 		2CE9F949271B78C6003B7456 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE9F948271B78C6003B7456 /* DetailsViewController.swift */; };
+		2CE9F94D271EED31003B7456 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE9F94C271EED31003B7456 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		2CE9F94427187A87003B7456 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		2CE9F946271892F9003B7456 /* ItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
 		2CE9F948271B78C6003B7456 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		2CE9F94C271EED31003B7456 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 				2CE9F934271855E0003B7456 /* HomeViewController.swift */,
 				2CE9F946271892F9003B7456 /* ItemTableViewCell.swift */,
 				2CE9F948271B78C6003B7456 /* DetailsViewController.swift */,
+				2CE9F94C271EED31003B7456 /* LoginViewController.swift */,
 				2CE9F94427187A87003B7456 /* Item.swift */,
 				2CE9F936271855E0003B7456 /* Main.storyboard */,
 				2CE9F939271855E2003B7456 /* Assets.xcassets */,
@@ -147,6 +150,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CE9F94D271EED31003B7456 /* LoginViewController.swift in Sources */,
 				2CE9F947271892FA003B7456 /* ItemTableViewCell.swift in Sources */,
 				2CE9F935271855E0003B7456 /* HomeViewController.swift in Sources */,
 				2CE9F94527187A87003B7456 /* Item.swift in Sources */,
