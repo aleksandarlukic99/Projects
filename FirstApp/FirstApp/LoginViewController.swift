@@ -39,7 +39,7 @@ class LoginViewController: UIViewController {
             alert.addAction(action)
             present(alert, animated: true, completion: nil)
         } else {
-            print("tototo")
+            performSegue(withIdentifier: "ShowHome", sender: nil)
         }
     }
     

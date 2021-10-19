@@ -13,6 +13,7 @@ class HomeViewController: UIViewController {
     let cellIdentifier = "RowCell"
     
     @IBOutlet weak var tableview: UITableView!
+    @IBOutlet private var logoutButton: UIButton!
     
     var players = [
         Item(title: "Nemanja Bjelica", subtitle: "Playing in Golden State Warriors\nHeight: 2.08m\nBorn in: 9 May 1988. (age: 33)\nWeight: 106kg\nCareer overall statistics: Points: 7.9, Assists: 1.8, Rebounds: 4.6.", imageName: "Bjelica"),
@@ -23,6 +24,14 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         tableview.dataSource = self
         tableview.delegate = self
+    }
+    
+    //MARK: - Actions
+    @IBAction func logoutScreenAction(_ sender: UIButton) {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let destinationVC = storyBoard.instantiateViewController(withIdentifier: "123456") as! LoginViewController
+        destinationVC.modalPresentationStyle = .fullScreen
+        present(destinationVC, animated: true, completion: nil)
     }
     
 }

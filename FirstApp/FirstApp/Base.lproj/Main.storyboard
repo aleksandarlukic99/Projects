@@ -112,10 +112,14 @@ DASDASDA</string>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Logout"/>
+                                <connections>
+                                    <action selector="logoutScreenAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jqf-Z1-eOp"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="logoutButton" destination="iP4-5S-8aj" id="0OR-Ln-QrM"/>
                         <outlet property="tableview" destination="ghL-xW-7Ay" id="qTP-Qh-QGG"/>
                         <segue destination="CMU-e6-V15" kind="show" identifier="ShowPlayer" id="CHJ-OU-C6r"/>
                     </connections>
@@ -127,7 +131,7 @@ DASDASDA</string>
         <!--Login View Controller-->
         <scene sceneID="Bwd-NY-IjE">
             <objects>
-                <viewController id="uTs-e4-lWs" customClass="LoginViewController" customModule="FirstApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="123456" id="uTs-e4-lWs" customClass="LoginViewController" customModule="FirstApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="V0W-ld-zoq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -192,12 +196,12 @@ DASDASDA</string>
                         <outlet property="passwordTextField" destination="PmI-wB-W8N" id="uut-xt-jND"/>
                         <outlet property="submitButton" destination="svQ-Lc-li4" id="0jS-Ti-0U3"/>
                         <outlet property="usernameTextField" destination="F8O-lm-ANV" id="Yx4-2L-pvF"/>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="ShowHome" id="23s-Vb-cvp"/>
+                        <segue destination="P2w-la-efL" kind="presentation" identifier="ShowHome" modalPresentationStyle="fullScreen" id="AOl-cL-are"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SeH-Wo-dGR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="700" y="770"/>
+            <point key="canvasLocation" x="-386" y="69"/>
         </scene>
         <!--Player-->
         <scene sceneID="iSt-dn-Ya3">
@@ -237,6 +241,7 @@ DASDASDA</string>
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="P2w-la-efL" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="TqE-uX-Nic"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="acV-ed-rIl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -248,12 +253,9 @@ DASDASDA</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4yh-Lj-zRp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="20" y="68.815592203898049"/>
+            <point key="canvasLocation" x="542" y="69"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="SRd-mi-xp0"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="person.text.rectangle.fill" catalog="system" width="128" height="93"/>
         <systemColor name="systemBackgroundColor">
