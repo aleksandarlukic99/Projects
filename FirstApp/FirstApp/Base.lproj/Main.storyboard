@@ -131,7 +131,7 @@ DASDASDA</string>
         <!--Login View Controller-->
         <scene sceneID="Bwd-NY-IjE">
             <objects>
-                <viewController storyboardIdentifier="123456" id="uTs-e4-lWs" customClass="LoginViewController" customModule="FirstApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginScreenID" id="uTs-e4-lWs" customClass="LoginViewController" customModule="FirstApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="V0W-ld-zoq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

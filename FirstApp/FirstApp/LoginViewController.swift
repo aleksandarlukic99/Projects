@@ -13,7 +13,6 @@ class LoginViewController: UIViewController {
     @IBOutlet private var passwordTextField: UITextField!
     @IBOutlet private var submitButton: UIButton!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         usernameTextField.delegate = self
@@ -21,8 +20,8 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func loginAction(_ sender: Any) {
-        let myPassword = isPasswordValid(password: passwordTextField.text!)
-        let myUsername = isUsernameValid(username: usernameTextField.text!)
+        let myPassword = isPasswordValid(password: passwordTextField.text ?? "")
+        let myUsername = isUsernameValid(username: usernameTextField.text ?? "")
         if myPassword == false && myUsername == false {
             let alert = UIAlertController(title: "Wrong password and username", message: "Username must have at least 4 characters. Password must contain at least 6 characters, 1 uppercase letter, 1 number and no space.", preferredStyle: .alert)
             let action = UIAlertAction(title: "OK", style: .default, handler: nil)
@@ -43,15 +42,6 @@ class LoginViewController: UIViewController {
         }
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
     
     func isPasswordValid(password: String) -> Bool {
         let passRegex = "^(?=.*[a-z])(?=.*[0-9])(?=.*[A-Z])[^\\s]{6,}$"

@@ -19,7 +19,7 @@ class ItemTableViewCell: UITableViewCell {
     @IBOutlet private var playerPictureImageView: UIImageView!
     
     var item: Item!
-    var delegate: ItemTableViewCellDelegate?
+    weak var delegate: ItemTableViewCellDelegate?
     
     override func awakeFromNib() {
         playerPictureImageView.layer.cornerRadius = (playerPictureImageView.frame.width / 2)

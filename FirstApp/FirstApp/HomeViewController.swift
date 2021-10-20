@@ -24,12 +24,23 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         tableview.dataSource = self
         tableview.delegate = self
+        
+        let header = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 40))
+        header.backgroundColor = .systemYellow
+        
+        let label = UILabel(frame: header.bounds)
+        label.text =  "Hello"
+        label.textAlignment = .center
+        header.addSubview(label)
+        
+        tableview.tableHeaderView = header
+        
     }
     
     //MARK: - Actions
     @IBAction func logoutScreenAction(_ sender: UIButton) {
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let destinationVC = storyBoard.instantiateViewController(withIdentifier: "123456") as! LoginViewController
+        let destinationVC = storyBoard.instantiateViewController(withIdentifier: "LoginScreenID") as! LoginViewController
         destinationVC.modalPresentationStyle = .fullScreen
         present(destinationVC, animated: true, completion: nil)
     }
@@ -88,7 +99,6 @@ extension HomeViewController: ItemTableViewCellDelegate {
             handler: nil)
         alert.addAction(action)
         self.present(alert, animated: true, completion: nil)
-        cell.delegate = self
     }
     
 }
