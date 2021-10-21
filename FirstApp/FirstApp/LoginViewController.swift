@@ -28,11 +28,11 @@ class LoginViewController: UIViewController {
         usernameTextField.delegate = self
         passwordTextField.delegate = self
         loadingUser()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         if userDefaults.bool(forKey: alreadyLog) == true {
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let destinationVC = storyboard.instantiateViewController(withIdentifier: "NBAPlayers") as! HomeViewController
-            destinationVC.modalPresentationStyle = .fullScreen
-            self.present(destinationVC, animated: true, completion: nil)
+            performSegue(withIdentifier: "ShowHome", sender: self)
         }
     }
     

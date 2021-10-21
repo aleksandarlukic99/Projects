@@ -39,6 +39,7 @@ class HomeViewController: UIViewController {
     
     //MARK: - Actions
     @IBAction func logoutScreenAction(_ sender: UIButton) {
+        UserDefaults.standard.set(false, forKey: "alreadyLoggedInKey")
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let destinationVC = storyBoard.instantiateViewController(withIdentifier: "LoginScreenID") as! LoginViewController
         destinationVC.modalPresentationStyle = .fullScreen
