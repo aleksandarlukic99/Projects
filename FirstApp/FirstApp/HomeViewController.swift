@@ -10,15 +10,13 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
-    let cellIdentifier = "RowCell"
-    
     @IBOutlet weak var tableview: UITableView!
     @IBOutlet private var logoutButton: UIButton!
     
     var players = [
-        Item(title: "Nemanja Bjelica", subtitle: "Playing in Golden State Warriors\nHeight: 2.08m\nBorn in: 9 May 1988. (age: 33)\nWeight: 106kg\nCareer overall statistics: Points: 7.9, Assists: 1.8, Rebounds: 4.6.", imageName: "Bjelica"),
-        Item(title: "Luka Doncic", subtitle: "Playing in Dallas Mavericks\nHeight: 2.01 m\nBorn in: 28 February 1999. (age: 22)\nWeight: 105kg\nCareer overall statistics: Points: 25.7, Assists: 7.7, Rebounds: 8.4.", imageName: "Doncic"),
-        Item(title: "Paul George", subtitle: "Playing in Los Angeles Clippers\nHeight: 2.03m\nBorn in: 2 May 1990. (age: 31)\nWeight: 100kg\nCareer overall statistics: Points: 20.2, Assists: 3.5, Rebounds: 6.4.", imageName: "George")]
+        Item(title: Constants.NemanjaBjelica.title , subtitle: Constants.NemanjaBjelica.subtitle, imageName: Constants.NemanjaBjelica.image),
+        Item(title: Constants.LukaDoncic.title, subtitle: Constants.LukaDoncic.subtitle, imageName: Constants.LukaDoncic.image),
+        Item(title: Constants.PaulGeorge.title, subtitle: Constants.PaulGeorge.subtitle, imageName: Constants.PaulGeorge.image) ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +27,7 @@ class HomeViewController: UIViewController {
         header.backgroundColor = .systemYellow
         
         let label = UILabel(frame: header.bounds)
-        label.text =  "Hello"
+        label.text = Constants.hello
         label.textAlignment = .center
         header.addSubview(label)
         
@@ -39,9 +37,9 @@ class HomeViewController: UIViewController {
     
     //MARK: - Actions
     @IBAction func logoutScreenAction(_ sender: UIButton) {
-        UserDefaults.standard.set(false, forKey: "alreadyLoggedInKey")
+        UserDefaults.standard.set(false, forKey: UserDefaults.Keys.alreadyLog)
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let destinationVC = storyBoard.instantiateViewController(withIdentifier: "LoginScreenID") as! LoginViewController
+        let destinationVC = storyBoard.instantiateViewController(withIdentifier: Constants.Identifiers.loginScreenID) as! LoginViewController
         destinationVC.modalPresentationStyle = .fullScreen
         present(destinationVC, animated: true, completion: nil)
     }
@@ -60,7 +58,7 @@ extension HomeViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! ItemTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.cellIdentifier, for: indexPath) as! ItemTableViewCell
         
         let player = players[indexPath.row]
         cell.configure(item: player)
@@ -73,14 +71,13 @@ extension HomeViewController: UITableViewDataSource {
         tableView.deselectRow(at: indexPath, animated: true)
         let playerList = players[indexPath.row]
         performSegue(
-            withIdentifier: "ShowPlayer",
+            withIdentifier: Constants.Identifiers.playerID,
             sender: playerList)
-        UserDefaults.standard.set(indexPath.row, forKey: "ItemIndex")
     }
     
     //MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "ShowPlayer" {
+        if segue.identifier == Constants.Identifiers.playerID {
             let playerList = segue.destination as! DetailsViewController
             playerList.item = sender as? Item
         }
@@ -96,7 +93,7 @@ extension HomeViewController: ItemTableViewCellDelegate {
             message: player.subtitle,
             preferredStyle: .alert)
         let action = UIAlertAction(
-            title: "OK",
+            title: Constants.ok,
             style: .default,
             handler: nil)
         alert.addAction(action)

@@ -18,10 +18,6 @@ class LoginViewController: UIViewController {
     var signedIn = false
     var choosenUsername = ""
     var choosenPassword = ""
-    let passKey = "passwordKey"
-    let userKey = "usernameKey"
-    let signedKey = "signedInKey"
-    let alreadyLog = "alreadyLoggedInKey"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,42 +27,36 @@ class LoginViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        if userDefaults.bool(forKey: alreadyLog) == true {
-            performSegue(withIdentifier: "ShowHome", sender: self)
+        if userDefaults.bool(forKey: UserDefaults.Keys.alreadyLog) == true {
+            performSegue(withIdentifier: Constants.Identifiers.homeID, sender: self)
         }
     }
     
     @IBAction func loginAction(_ sender: Any) {
         let myPassword = isPasswordValid(password: passwordTextField.text ?? "")
         let myUsername = isUsernameValid(username: usernameTextField.text ?? "")
-        let wrongPassAndUsernameTitle = "Wrong password and username"
-        let wrongPassAndUsernameMessage = "Username must have at least 4 characters. Password must contain at least 6 characters, 1 uppercase letter, 1 number and no space."
-        let wrongPassTitle = "Wrong password"
-        let wrongPassMessage = "Password must contain at least 6 characters, 1 uppercase letter, 1 number and no space."
-        let wrongUsernameTitle = "Wrong username"
-        let wrongUsernameMessage = "Username must have at least 4 characters and no space."
         
         if myPassword == false && myUsername == false {
-            loginAlerts(title: wrongPassAndUsernameTitle, message: wrongPassAndUsernameMessage)
+            loginAlerts(title: Constants.Wrong.passAndUsernameTitle, message: Constants.Wrong.passAndUsernameMessage)
         } else if myPassword == false && myUsername == true {
-            loginAlerts(title: wrongPassTitle, message: wrongPassMessage)
+            loginAlerts(title: Constants.Wrong.passTitle, message: Constants.Wrong.passMessage)
         } else if myPassword == true && myUsername == false {
-            loginAlerts(title: wrongUsernameTitle, message: wrongUsernameMessage)
+            loginAlerts(title: Constants.Wrong.usernameTitle, message: Constants.Wrong.usernameMessage)
         } else {
             if signedIn == false {
                 signedIn = true
                 guard let usernameText = usernameTextField.text, let passwordText = passwordTextField.text else { return }
-                userDefaults.set(usernameText, forKey: userKey)
-                userDefaults.set(passwordText, forKey: passKey)
-                userDefaults.set(signedIn, forKey: signedKey)
-                performSegue(withIdentifier: "ShowHome", sender: nil)
+                userDefaults.set(usernameText, forKey: UserDefaults.Keys.userKey)
+                userDefaults.set(passwordText, forKey: UserDefaults.Keys.passKey)
+                userDefaults.set(signedIn, forKey: UserDefaults.Keys.signedKey)
+                performSegue(withIdentifier: Constants.Identifiers.homeID, sender: nil)
             } else {
                 if usernameTextField.text == choosenUsername && passwordTextField.text == choosenPassword {
                     //un: aleksandarlukic pass: Aleksandarlukic99
-                    userDefaults.set(true, forKey: alreadyLog)
-                    performSegue(withIdentifier: "ShowHome", sender: nil)
+                    userDefaults.set(true, forKey: UserDefaults.Keys.alreadyLog)
+                    performSegue(withIdentifier: Constants.Identifiers.homeID, sender: nil)
                 } else {
-                    loginAlerts(title: "Wrong username or password", message: "Enter your registered username and password")
+                    loginAlerts(title: Constants.Wrong.passOrUsernameTitle, message: Constants.Wrong.passOrUsernameMessage)
                 }
             }
         }
@@ -89,15 +79,15 @@ class LoginViewController: UIViewController {
     
     func loginAlerts(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+        let action = UIAlertAction(title: Constants.ok, style: .default, handler: nil)
         alert.addAction(action)
         present(alert, animated: true, completion: nil)
     }
     
     func loadingUser() {
-        guard let storedUsername = userDefaults.value(forKey: userKey) as? String else { return }
-        guard let storedPassword = userDefaults.value(forKey: passKey) as? String else { return }
-        let userHasSingedIn = userDefaults.bool(forKey: signedKey)
+        guard let storedUsername = userDefaults.value(forKey: UserDefaults.Keys.userKey) as? String else { return }
+        guard let storedPassword = userDefaults.value(forKey: UserDefaults.Keys.passKey) as? String else { return }
+        let userHasSingedIn = userDefaults.bool(forKey: UserDefaults.Keys.signedKey)
         
         choosenUsername = storedUsername
         choosenPassword = storedPassword
@@ -110,4 +100,17 @@ class LoginViewController: UIViewController {
 extension LoginViewController: UITextFieldDelegate {
     
 }
+
+extension UserDefaults {
+    
+    enum Keys {
+        static let passKey = "passwordKey"
+        static let userKey = "usernameKey"
+        static let signedKey = "signedInKey"
+        static let alreadyLog = "alreadyLoggedInKey"
+    }
+    
+}
+
+
 
