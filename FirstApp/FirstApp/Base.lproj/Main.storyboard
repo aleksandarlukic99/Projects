@@ -250,7 +250,7 @@ DASDASDA</string>
                                     <constraint firstAttribute="height" constant="34" id="V2T-jH-El8"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dpm-KQ-1h3">
                                 <rect key="frame" x="16" y="333" width="343" height="34"/>
@@ -258,7 +258,7 @@ DASDASDA</string>
                                     <constraint firstAttribute="height" constant="34" id="7Fe-6u-DVp"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="Sf8-HT-5tr">
                                 <rect key="frame" x="16" y="404" width="343" height="62"/>

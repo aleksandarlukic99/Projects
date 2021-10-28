@@ -23,6 +23,7 @@ class RegisterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        updateTextView()
     }
     
     //MARK: - Actions
@@ -34,5 +35,19 @@ class RegisterViewController: UIViewController {
         destinationVC.modalPresentationStyle = .fullScreen
         present(destinationVC, animated: true, completion: nil)
     }
+    
+    func updateTextView () {
+        let path = "https://en.wikipedia.org/wiki/Privacy_policy"
+        let text = privacyPolicyTextView.text ?? ""
+        let attributedString = NSAttributedString.makeHyperlink(for: path, in: text, as: "Privacy policy")
+        let font = privacyPolicyTextView.font
+        privacyPolicyTextView.attributedText = attributedString
+        privacyPolicyTextView.font = font
+        privacyPolicyTextView.textAlignment = .center
+    }
+    
+}
+
+extension RegisterViewController: UITextFieldDelegate {
     
 }
