@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C9A26C7272ACF0E00399624 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9A26C6272ACF0E00399624 /* RegisterViewController.swift */; };
 		2CE9F931271855E0003B7456 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE9F930271855E0003B7456 /* AppDelegate.swift */; };
 		2CE9F933271855E0003B7456 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE9F932271855E0003B7456 /* SceneDelegate.swift */; };
 		2CE9F935271855E0003B7456 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE9F934271855E0003B7456 /* HomeViewController.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C9A26C6272ACF0E00399624 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		2CE9F92D271855E0003B7456 /* FirstApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirstApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CE9F930271855E0003B7456 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2CE9F932271855E0003B7456 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 				2CE9F939271855E2003B7456 /* Assets.xcassets */,
 				2CE9F93B271855E2003B7456 /* LaunchScreen.storyboard */,
 				2CE9F936271855E0003B7456 /* Main.storyboard */,
+				2C9A26C6272ACF0E00399624 /* RegisterViewController.swift */,
 			);
 			path = FirstApp;
 			sourceTree = "<group>";
@@ -153,6 +156,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C9A26C7272ACF0E00399624 /* RegisterViewController.swift in Sources */,
 				2CE9F94D271EED31003B7456 /* LoginViewController.swift in Sources */,
 				2CE9F947271892FA003B7456 /* ItemTableViewCell.swift in Sources */,
 				2CE9F935271855E0003B7456 /* HomeViewController.swift in Sources */,

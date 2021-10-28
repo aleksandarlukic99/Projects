@@ -12,6 +12,7 @@ class LoginViewController: UIViewController {
     @IBOutlet private var usernameTextField: UITextField!
     @IBOutlet private var passwordTextField: UITextField!
     @IBOutlet private var submitButton: UIButton!
+    @IBOutlet private var registerButton: UIButton!
     
     let userDefaults = UserDefaults.standard
     
@@ -31,6 +32,8 @@ class LoginViewController: UIViewController {
             performSegue(withIdentifier: Constants.Identifiers.homeID, sender: self)
         }
     }
+    
+    //MARK: - Actions
     
     @IBAction func loginAction(_ sender: Any) {
         let myPassword = isPasswordValid(password: passwordTextField.text ?? "")
@@ -62,6 +65,12 @@ class LoginViewController: UIViewController {
         }
     }
     
+    @IBAction func switchToRegisterController(_ sender: Any) {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let destinationVC = storyBoard.instantiateViewController(withIdentifier: Constants.Identifiers.registerScreenID) as! RegisterViewController
+        destinationVC.modalPresentationStyle = .fullScreen
+        present(destinationVC, animated: true, completion: nil)
+    }
     
     func isPasswordValid(password: String) -> Bool {
         let passRegex = "^(?=.*[a-z])(?=.*[0-9])(?=.*[A-Z])[^\\s]{6,}$"
