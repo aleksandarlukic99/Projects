@@ -27,7 +27,8 @@ class HomeViewController: UIViewController {
         header.backgroundColor = .systemYellow
         
         let label = UILabel(frame: header.bounds)
-        label.text = Constants.hello
+        let user = UserDefaults.standard.object(forKey: UserDefaults.Keys.userKey) as? String
+        label.text = "Hello \(user!)"
         label.textAlignment = .center
         header.addSubview(label)
         
