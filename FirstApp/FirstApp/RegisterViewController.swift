@@ -20,6 +20,8 @@ class RegisterViewController: UIViewController {
     @IBOutlet private var registerButton: UIButton!
     @IBOutlet private var privacyPolicyTextView: UITextView!
     @IBOutlet private var backToLoginButton: UIButton!
+    @IBOutlet private var passwordSwitch: UISwitch!
+    @IBOutlet private var passwordConfirmSwitch: UISwitch!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,7 +59,7 @@ class RegisterViewController: UIViewController {
         if firstName == true && lastName == true && username == true && email == true && password == true && passwordConfirm == password && birthday == true {
             performSegue(withIdentifier: Constants.Identifiers.homePlayersID, sender: nil)
         } else {
-            print("Not good")
+            loginAlerts(title: Constants.Wrong.inputsTitle, message: Constants.Wrong.inputsMessage)
         }
         
     }
@@ -69,6 +71,22 @@ class RegisterViewController: UIViewController {
             print("Female")
         }
         
+    }
+    
+    @IBAction func showPasswordSwitchAction(_ sender: Any) {
+        if passwordSwitch.isOn == true {
+            passwordTextField.isSecureTextEntry = false
+        } else if passwordSwitch.isOn == false {
+            passwordTextField.isSecureTextEntry = true
+        }
+    }
+    
+    @IBAction func showPasswordConfirmAction(_ sender: Any) {
+        if passwordConfirmSwitch.isOn == true {
+            confirmPasswordTextField.isSecureTextEntry = false
+        } else if passwordConfirmSwitch.isOn == false {
+            confirmPasswordTextField.isSecureTextEntry = true
+        }
     }
     
     

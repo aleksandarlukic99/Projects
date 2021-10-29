@@ -26,6 +26,8 @@ enum Constants {
         static let usernameMessage = "Username must have at least 4 characters and no space."
         static let passOrUsernameTitle = "Wrong username or password"
         static let passOrUsernameMessage = "Enter your registered username and password"
+        static let inputsTitle = "Wrong input(s) Take care about:"
+        static let inputsMessage = "-First and last name can only use alphabet.\n-Username can only use alphabet, numbers and no space.\n-Email must be existing.\n-Passwords must match.\n-Password must contain at least 6 characters, 1 uppercase letter, 1 number, 1 special character and no space.\n-You must be at least 18 years old."
     }
     
     enum NemanjaBjelica {
