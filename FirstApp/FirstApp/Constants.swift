@@ -14,6 +14,7 @@ enum Constants {
         static let playerID = "ShowPlayer"
         static let loginScreenID = "LoginScreenID"
         static let registerScreenID = "RegisterScreenID"
+        static let homePlayersID = "ShowHomePlayers"
     }
     
     enum Wrong {

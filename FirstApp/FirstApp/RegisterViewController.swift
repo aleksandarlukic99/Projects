@@ -29,6 +29,7 @@ class RegisterViewController: UIViewController {
         emailTextField.delegate = self
         passwordTextField.delegate = self
         confirmPasswordTextField.delegate = self
+        [firstNameTextField, lastNameTextField, usernameTextField, emailTextField, passwordTextField, confirmPasswordTextField].forEach({ $0.addTarget(self, action: #selector(editingChanged), for: .editingChanged) })
         passwordTextField.autocorrectionType = .no
         confirmPasswordTextField.autocorrectionType = .no
         updateTextView()
@@ -43,6 +44,33 @@ class RegisterViewController: UIViewController {
         destinationVC.modalPresentationStyle = .fullScreen
         present(destinationVC, animated: true, completion: nil)
     }
+    
+    @IBAction func registerAction(_ sender: Any) {
+        let firstName = isValidFirstAndLastName(names: firstNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? "")
+        let lastName = isValidFirstAndLastName(names: lastNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? "")
+        let username = isValidUsername(username: usernameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? "")
+        let email = isEmailValid(email: emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? "")
+        let password = isPasswordValid(password: passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? "")
+        let passwordConfirm = isPasswordValid(password: confirmPasswordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? "")
+        let birthday = validateAge(birthDate: birthdayDatePicker.date)
+        
+        if firstName == true && lastName == true && username == true && email == true && password == true && passwordConfirm == password && birthday == true {
+            performSegue(withIdentifier: Constants.Identifiers.homePlayersID, sender: nil)
+        } else {
+            print("Not good")
+        }
+        
+    }
+    @IBAction func genderChooseAction(_ sender: Any) {
+        
+        if genderSegmentedControl.selectedSegmentIndex == 0 {
+            print("male")
+        } else if genderSegmentedControl.selectedSegmentIndex == 1 {
+            print("Female")
+        }
+        
+    }
+    
     
     //MARK: - Methods
     
@@ -62,6 +90,29 @@ class RegisterViewController: UIViewController {
         alert.addAction(action)
         present(alert, animated: true, completion: nil)
     }
+    
+    @objc func editingChanged(_ textField: UITextField) {
+        if textField.text?.count == 1 {
+            if textField.text?.first == " " {
+                textField.text = ""
+                return
+            }
+        }
+        guard
+            let firstName = firstNameTextField.text, !firstName.isEmpty,
+            let lastName = lastNameTextField.text, !lastName.isEmpty,
+            let username = usernameTextField.text, !username.isEmpty,
+            let email = emailTextField.text, !email.isEmpty,
+            let password = passwordTextField.text, !password.isEmpty,
+            let confirmPassword = confirmPasswordTextField.text, !confirmPassword.isEmpty
+        else {
+            registerButton.isEnabled = false
+            return
+        }
+        registerButton.isEnabled = true
+    }
+    
+    //MARK: - Validations
     
     func isPasswordValid(password: String) -> Bool {
         let passRegex = "^(?=.*[a-z])(?=.*[0-9])(?=.*[!@#$&*])(?=.*[A-Z])[^\\s]{6,}$"
@@ -89,7 +140,7 @@ class RegisterViewController: UIViewController {
     }
     
     func validateAge(birthDate: Date) -> Bool {
-        let maximumAge: Date = Calendar.current.date(byAdding: .year, value: -100, to: Date())!
+        let maximumAge: Date = Calendar.current.date(byAdding: .year, value: -120, to: Date())!
         let minimumAge: Date = Calendar.current.date(byAdding: .year, value: -18, to: Date())!
         
         var isValid: Bool = true
