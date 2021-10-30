@@ -23,6 +23,8 @@ class RegisterViewController: UIViewController {
     @IBOutlet private var passwordSwitch: UISwitch!
     @IBOutlet private var passwordConfirmSwitch: UISwitch!
     
+    let userDefaults = UserDefaults.standard
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         firstNameTextField.delegate = self
@@ -48,15 +50,30 @@ class RegisterViewController: UIViewController {
     }
     
     @IBAction func registerAction(_ sender: Any) {
-        let firstName = isValidFirstAndLastName(names: firstNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? "")
-        let lastName = isValidFirstAndLastName(names: lastNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? "")
-        let username = isValidUsername(username: usernameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? "")
-        let email = isEmailValid(email: emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? "")
-        let password = isPasswordValid(password: passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? "")
-        let passwordConfirm = isPasswordValid(password: confirmPasswordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? "")
+        let firstNameText = firstNameTextField.text
+        let lastNameText = lastNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
+        let usernameText = usernameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
+        let emailText = emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
+        let passwordText = passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
+        let passwordConfirmText = confirmPasswordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
+        let firstNameTrimmed = firstNameText?.trimmingCharacters(in: .whitespacesAndNewlines)
+        let lastNameTrimmed = lastNameText?.trimmingCharacters(in: .whitespacesAndNewlines)
+        let usernameTrimmed = usernameText?.trimmingCharacters(in: .whitespacesAndNewlines)
+        let emailTrimmed = emailText?.trimmingCharacters(in: .whitespacesAndNewlines)
+        let passwordTrimmed = passwordText?.trimmingCharacters(in: .whitespacesAndNewlines)
+        let confirmPasswordTrimmed = passwordConfirmText?.trimmingCharacters(in: .whitespacesAndNewlines)
+        let firstName = isValidFirstAndLastName(names: firstNameTrimmed ?? "")
+        let lastName = isValidFirstAndLastName(names: lastNameTrimmed ?? "")
+        let username = isValidUsername(username: usernameTrimmed ?? "")
+        let email = isEmailValid(email: emailTrimmed ?? "")
+        let password = isPasswordValid(password: passwordTrimmed ?? "")
+        let passwordConfirm = isPasswordValid(password: confirmPasswordTrimmed ?? "")
         let birthday = validateAge(birthDate: birthdayDatePicker.date)
         
         if firstName == true && lastName == true && username == true && email == true && password == true && passwordConfirm == password && birthday == true {
+            guard let usernameText = usernameTrimmed, let passwordText = passwordTrimmed else { return }
+            userDefaults.set(usernameText, forKey: UserDefaults.Keys.userKey)
+            userDefaults.set(passwordText, forKey: UserDefaults.Keys.passKey)
             performSegue(withIdentifier: Constants.Identifiers.homePlayersID, sender: nil)
         } else {
             loginAlerts(title: Constants.Wrong.inputsTitle, message: Constants.Wrong.inputsMessage)
@@ -64,13 +81,11 @@ class RegisterViewController: UIViewController {
         
     }
     @IBAction func genderChooseAction(_ sender: Any) {
-        
         if genderSegmentedControl.selectedSegmentIndex == 0 {
             print("male")
         } else if genderSegmentedControl.selectedSegmentIndex == 1 {
             print("Female")
         }
-        
     }
     
     @IBAction func showPasswordSwitchAction(_ sender: Any) {
@@ -88,7 +103,6 @@ class RegisterViewController: UIViewController {
             confirmPasswordTextField.isSecureTextEntry = true
         }
     }
-    
     
     //MARK: - Methods
     
@@ -146,7 +160,7 @@ class RegisterViewController: UIViewController {
     
     func isValidFirstAndLastName(names: String) -> Bool {
         guard names.count > 2 else { return false }
-        let nameRegex = "^(([^ ]?)(^[a-zA-Z].*[a-zA-Z]$)([^ ]?))$"
+        let nameRegex = "^[A-Z][a-z]*$"
         let predicateTesting = NSPredicate(format: "SELF MATCHES %@", nameRegex)
         return predicateTesting.evaluate(with: names)
     }
@@ -166,7 +180,6 @@ class RegisterViewController: UIViewController {
         if birthDate < maximumAge || birthDate > minimumAge {
             isValid = false
         }
-        
         return isValid
     }
     

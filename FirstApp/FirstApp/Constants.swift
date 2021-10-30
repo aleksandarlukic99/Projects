@@ -19,9 +19,9 @@ enum Constants {
     
     enum Wrong {
         static let passAndUsernameTitle = "Wrong password and username"
-        static let passAndUsernameMessage = "Username must have at least 4 characters. Password must contain at least 6 characters, 1 uppercase letter, 1 number and no space."
+        static let passAndUsernameMessage = "Username must have at least 4 characters. Password must contain at least 6 characters, 1 uppercase letter, 1 special character, 1 number and no space."
         static let passTitle = "Wrong password"
-        static let passMessage = "Password must contain at least 6 characters, 1 uppercase letter, 1 number and no space."
+        static let passMessage = "Password must contain at least 6 characters, 1 uppercase letter, 1 special character, 1 number and no space."
         static let usernameTitle = "Wrong username"
         static let usernameMessage = "Username must have at least 4 characters and no space."
         static let passOrUsernameTitle = "Wrong username or password"

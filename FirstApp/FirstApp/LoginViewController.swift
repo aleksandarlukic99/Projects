@@ -36,8 +36,13 @@ class LoginViewController: UIViewController {
     //MARK: - Actions
     
     @IBAction func loginAction(_ sender: Any) {
-        let myPassword = isPasswordValid(password: passwordTextField.text ?? "")
-        let myUsername = isUsernameValid(username: usernameTextField.text ?? "")
+        let passwordText = passwordTextField.text
+        let usernameText = usernameTextField.text
+        let trimmingPassword = passwordText?.trimmingCharacters(in: .whitespacesAndNewlines)
+        let trimmingUsername = usernameText?.trimmingCharacters(in: .whitespacesAndNewlines)
+        
+        let myPassword = isPasswordValid(password: trimmingPassword ?? "")
+        let myUsername = isValidUsername(username: trimmingUsername ?? "")
         
         if myPassword == false && myUsername == false {
             loginAlerts(title: Constants.Wrong.passAndUsernameTitle, message: Constants.Wrong.passAndUsernameMessage)
@@ -48,14 +53,13 @@ class LoginViewController: UIViewController {
         } else {
             if signedIn == false {
                 signedIn = true
-                guard let usernameText = usernameTextField.text, let passwordText = passwordTextField.text else { return }
+                guard let usernameText = trimmingUsername, let passwordText = trimmingPassword else { return }
                 userDefaults.set(usernameText, forKey: UserDefaults.Keys.userKey)
                 userDefaults.set(passwordText, forKey: UserDefaults.Keys.passKey)
                 userDefaults.set(signedIn, forKey: UserDefaults.Keys.signedKey)
                 performSegue(withIdentifier: Constants.Identifiers.homeID, sender: nil)
             } else {
                 if usernameTextField.text == choosenUsername && passwordTextField.text == choosenPassword {
-                    //un: aleksandarlukic pass: Aleksandarlukic99
                     userDefaults.set(true, forKey: UserDefaults.Keys.alreadyLog)
                     performSegue(withIdentifier: Constants.Identifiers.homeID, sender: nil)
                 } else {
@@ -73,17 +77,15 @@ class LoginViewController: UIViewController {
     }
     
     func isPasswordValid(password: String) -> Bool {
-        let passRegex = "^(?=.*[a-z])(?=.*[0-9])(?=.*[A-Z])[^\\s]{6,}$"
+        let passRegex = "^(?=.*[a-z])(?=.*[0-9])(?=.*[!@#$&*])(?=.*[A-Z])[^\\s]{6,}$"
         let passwordTesting = NSPredicate(format: "SELF MATCHES %@", passRegex)
         return passwordTesting.evaluate(with: password)
     }
     
-    func isUsernameValid(username: String) -> Bool {
-        if username.count < 4 || username.contains(" ") {
-            return false
-        } else {
-            return true
-        }
+    func isValidUsername(username: String) -> Bool {
+        let usernameRegex = "^[a-zA-Z0-9]{4,}$"
+        let usernameTesting = NSPredicate(format:"SELF MATCHES %@", usernameRegex)
+        return usernameTesting.evaluate(with: username)
     }
     
     func loginAlerts(title: String, message: String) {
