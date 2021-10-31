@@ -20,8 +20,8 @@ class RegisterViewController: UIViewController {
     @IBOutlet private var registerButton: UIButton!
     @IBOutlet private var privacyPolicyTextView: UITextView!
     @IBOutlet private var backToLoginButton: UIButton!
-    @IBOutlet private var passwordSwitch: UISwitch!
-    @IBOutlet private var passwordConfirmSwitch: UISwitch!
+    @IBOutlet private var showPasswordButton: UIButton!
+    @IBOutlet private var showPasswordConfirmButton: UIButton!
     
     let userDefaults = UserDefaults.standard
     
@@ -37,6 +37,10 @@ class RegisterViewController: UIViewController {
         passwordTextField.autocorrectionType = .no
         confirmPasswordTextField.autocorrectionType = .no
         updateTextView()
+        showPasswordButton.addTarget(self, action: #selector(passwordButtonDown), for: .touchDown)
+        showPasswordButton.addTarget(self, action: #selector(passwordButtonUp), for: [.touchUpInside, .touchUpOutside])
+        showPasswordConfirmButton.addTarget(self, action: #selector(confirmPasswordButtonDown), for: .touchDown)
+        showPasswordConfirmButton.addTarget(self, action: #selector(confirmPasswordButtonUp), for: [.touchUpInside, .touchUpOutside])
     }
     
     //MARK: - Actions
@@ -80,27 +84,12 @@ class RegisterViewController: UIViewController {
         }
         
     }
+    
     @IBAction func genderChooseAction(_ sender: Any) {
         if genderSegmentedControl.selectedSegmentIndex == 0 {
             print("male")
         } else if genderSegmentedControl.selectedSegmentIndex == 1 {
             print("Female")
-        }
-    }
-    
-    @IBAction func showPasswordSwitchAction(_ sender: Any) {
-        if passwordSwitch.isOn == true {
-            passwordTextField.isSecureTextEntry = false
-        } else if passwordSwitch.isOn == false {
-            passwordTextField.isSecureTextEntry = true
-        }
-    }
-    
-    @IBAction func showPasswordConfirmAction(_ sender: Any) {
-        if passwordConfirmSwitch.isOn == true {
-            confirmPasswordTextField.isSecureTextEntry = false
-        } else if passwordConfirmSwitch.isOn == false {
-            confirmPasswordTextField.isSecureTextEntry = true
         }
     }
     
@@ -142,6 +131,22 @@ class RegisterViewController: UIViewController {
             return
         }
         registerButton.isEnabled = true
+    }
+    
+    @objc func passwordButtonDown(_ sender: UIButton) {
+        passwordTextField.isSecureTextEntry = false
+    }
+    
+    @objc func confirmPasswordButtonDown(_ sender: UIButton) {
+        confirmPasswordTextField.isSecureTextEntry = false
+    }
+    
+    @objc func passwordButtonUp(_ sender: UIButton) {
+        passwordTextField.isSecureTextEntry = true
+    }
+    
+    @objc func confirmPasswordButtonUp(_ sender: UIButton) {
+        confirmPasswordTextField.isSecureTextEntry = true
     }
     
     //MARK: - Validations
