@@ -55,11 +55,11 @@ class RegisterViewController: UIViewController {
     
     @IBAction func registerAction(_ sender: Any) {
         let firstNameText = firstNameTextField.text
-        let lastNameText = lastNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
-        let usernameText = usernameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
-        let emailText = emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
-        let passwordText = passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
-        let passwordConfirmText = confirmPasswordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
+        let lastNameText = lastNameTextField.text
+        let usernameText = usernameTextField.text
+        let emailText = emailTextField.text
+        let passwordText = passwordTextField.text
+        let passwordConfirmText = confirmPasswordTextField.text
         let firstNameTrimmed = firstNameText?.trimmingCharacters(in: .whitespacesAndNewlines)
         let lastNameTrimmed = lastNameText?.trimmingCharacters(in: .whitespacesAndNewlines)
         let usernameTrimmed = usernameText?.trimmingCharacters(in: .whitespacesAndNewlines)
