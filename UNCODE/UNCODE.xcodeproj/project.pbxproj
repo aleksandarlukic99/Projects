@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C0C348E27D7FB35004097EC /* ResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0C348D27D7FB35004097EC /* ResultTableViewCell.swift */; };
+		2C0C349227D7FBA9004097EC /* ResultBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0C349127D7FBA9004097EC /* ResultBarView.swift */; };
+		2C0C349427D7FC86004097EC /* ResultViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0C349327D7FC86004097EC /* ResultViewItem.swift */; };
 		2C0F722727D64FBF007253DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0F722627D64FBF007253DC /* AppDelegate.swift */; };
 		2C0F722927D64FBF007253DC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0F722827D64FBF007253DC /* SceneDelegate.swift */; };
 		2C0F722B27D64FBF007253DC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0F722A27D64FBF007253DC /* ViewController.swift */; };
@@ -148,6 +151,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C0C348D27D7FB35004097EC /* ResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTableViewCell.swift; sourceTree = "<group>"; };
+		2C0C349127D7FBA9004097EC /* ResultBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultBarView.swift; sourceTree = "<group>"; };
+		2C0C349327D7FC86004097EC /* ResultViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewItem.swift; sourceTree = "<group>"; };
 		2C0F722327D64FBF007253DC /* UNCODE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UNCODE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C0F722627D64FBF007253DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2C0F722827D64FBF007253DC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -328,6 +334,9 @@
 				2C0F722F27D64FC1007253DC /* Assets.xcassets */,
 				2C0F723127D64FC1007253DC /* LaunchScreen.storyboard */,
 				2C0F723427D64FC1007253DC /* Info.plist */,
+				2C0C348D27D7FB35004097EC /* ResultTableViewCell.swift */,
+				2C0C349127D7FBA9004097EC /* ResultBarView.swift */,
+				2C0C349327D7FC86004097EC /* ResultViewItem.swift */,
 			);
 			path = UNCODE;
 			sourceTree = "<group>";
@@ -716,6 +725,9 @@
 			files = (
 				2C0F722B27D64FBF007253DC /* ViewController.swift in Sources */,
 				2C0F722727D64FBF007253DC /* AppDelegate.swift in Sources */,
+				2C0C349427D7FC86004097EC /* ResultViewItem.swift in Sources */,
+				2C0C348E27D7FB35004097EC /* ResultTableViewCell.swift in Sources */,
+				2C0C349227D7FBA9004097EC /* ResultBarView.swift in Sources */,
 				2C0F722927D64FBF007253DC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
