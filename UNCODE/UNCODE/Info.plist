@@ -4,7 +4,10 @@
 <dict>
 	<key>UIAppFonts</key>
 	<array>
-		<string></string>
+		<string>Monserrat-Regular.ttf</string>
+		<string>Rubik-Regular.ttf</string>
+		<string>Rubik-Light.ttf</string>
+		<string>Inter-Regular.ttf</string>
 	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>

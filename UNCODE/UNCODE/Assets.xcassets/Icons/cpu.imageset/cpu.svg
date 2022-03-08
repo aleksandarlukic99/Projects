@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>cpu</title>
+    <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="feather-icon" transform="translate(-717.000000, -248.000000)" stroke="#000000" stroke-width="2">
+            <g id="cpu" transform="translate(718.000000, 249.000000)">
+                <rect id="Rectangle-path" x="3" y="3" width="16" height="16" rx="2"></rect>
+                <rect id="Rectangle-path" x="8" y="8" width="6" height="6"></rect>
+                <line x1="8" y1="0" x2="8" y2="3" id="Shape"></line>
+                <line x1="14" y1="0" x2="14" y2="3" id="Shape"></line>
+                <line x1="8" y1="19" x2="8" y2="22" id="Shape"></line>
+                <line x1="14" y1="19" x2="14" y2="22" id="Shape"></line>
+                <line x1="19" y1="8" x2="22" y2="8" id="Shape"></line>
+                <line x1="19" y1="13" x2="22" y2="13" id="Shape"></line>
+                <line x1="0" y1="8" x2="3" y2="8" id="Shape"></line>
+                <line x1="0" y1="13" x2="3" y2="13" id="Shape"></line>
+            </g>
+        </g>
+    </g>
+</svg>
