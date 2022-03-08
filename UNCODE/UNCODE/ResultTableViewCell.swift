@@ -13,16 +13,25 @@ class ResultTableViewCell: UITableViewCell {
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var infoLabel: UILabel!
     
-    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+        
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
 
-        // Configure the view for the selected state
+        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20))
+        contentView.layer.cornerRadius = 10
+        contentView.layer.masksToBounds = true
+    }
+    
+    func configure(item: ResultViewItem) {
+        
     }
 
 }

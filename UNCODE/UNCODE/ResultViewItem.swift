@@ -8,5 +8,7 @@
 import Foundation
 
 struct ResultViewItem {
-    
+    let title: String
+    let subtitle: String
+    let info: String
 }
