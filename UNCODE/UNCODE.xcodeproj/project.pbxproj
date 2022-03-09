@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		2C0C348E27D7FB35004097EC /* ResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0C348D27D7FB35004097EC /* ResultTableViewCell.swift */; };
-		2C0C349227D7FBA9004097EC /* ResultBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0C349127D7FBA9004097EC /* ResultBarView.swift */; };
 		2C0C349427D7FC86004097EC /* ResultViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0C349327D7FC86004097EC /* ResultViewItem.swift */; };
 		2C0F722727D64FBF007253DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0F722627D64FBF007253DC /* AppDelegate.swift */; };
 		2C0F722927D64FBF007253DC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0F722827D64FBF007253DC /* SceneDelegate.swift */; };
@@ -148,11 +147,12 @@
 		2C5A563027D6B3ED00C5F0A5 /* Rubik-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2C5A562E27D6B3ED00C5F0A5 /* Rubik-VariableFont_wght.ttf */; };
 		2C5A563327D6B41800C5F0A5 /* Montserrat-Italic-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2C5A563127D6B41700C5F0A5 /* Montserrat-Italic-VariableFont_wght.ttf */; };
 		2C5A563427D6B41800C5F0A5 /* Montserrat-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2C5A563227D6B41700C5F0A5 /* Montserrat-VariableFont_wght.ttf */; };
+		2CD8502627D8F7F70093F37E /* ResultBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD8502527D8F7F70093F37E /* ResultBarView.swift */; };
+		2CD8502A27D8FBCE0093F37E /* ResultBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CD8502927D8FBCE0093F37E /* ResultBarView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2C0C348D27D7FB35004097EC /* ResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTableViewCell.swift; sourceTree = "<group>"; };
-		2C0C349127D7FBA9004097EC /* ResultBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultBarView.swift; sourceTree = "<group>"; };
 		2C0C349327D7FC86004097EC /* ResultViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewItem.swift; sourceTree = "<group>"; };
 		2C0F722327D64FBF007253DC /* UNCODE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UNCODE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C0F722627D64FBF007253DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -294,6 +294,8 @@
 		2C5A562E27D6B3ED00C5F0A5 /* Rubik-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		2C5A563127D6B41700C5F0A5 /* Montserrat-Italic-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Italic-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		2C5A563227D6B41700C5F0A5 /* Montserrat-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-VariableFont_wght.ttf"; sourceTree = "<group>"; };
+		2CD8502527D8F7F70093F37E /* ResultBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultBarView.swift; sourceTree = "<group>"; };
+		2CD8502927D8FBCE0093F37E /* ResultBarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultBarView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -331,12 +333,13 @@
 				2C0F722827D64FBF007253DC /* SceneDelegate.swift */,
 				2C0F722A27D64FBF007253DC /* ViewController.swift */,
 				2C0F722C27D64FBF007253DC /* Main.storyboard */,
+				2CD8502927D8FBCE0093F37E /* ResultBarView.xib */,
 				2C0F722F27D64FC1007253DC /* Assets.xcassets */,
 				2C0F723127D64FC1007253DC /* LaunchScreen.storyboard */,
 				2C0F723427D64FC1007253DC /* Info.plist */,
 				2C0C348D27D7FB35004097EC /* ResultTableViewCell.swift */,
-				2C0C349127D7FBA9004097EC /* ResultBarView.swift */,
 				2C0C349327D7FC86004097EC /* ResultViewItem.swift */,
+				2CD8502527D8F7F70093F37E /* ResultBarView.swift */,
 			);
 			path = UNCODE;
 			sourceTree = "<group>";
@@ -595,6 +598,7 @@
 				2C5A55FA27D6B35600C5F0A5 /* SF-Pro-Display-Bold.otf in Resources */,
 				2C5A554927D6B32100C5F0A5 /* Montserrat-MediumItalic.ttf in Resources */,
 				2C5A55C127D6B35600C5F0A5 /* SF-Pro-Rounded-Regular.otf in Resources */,
+				2CD8502A27D8FBCE0093F37E /* ResultBarView.xib in Resources */,
 				2C5A562A27D6B3BA00C5F0A5 /* Inter-Bold.ttf in Resources */,
 				2C5A55E827D6B35600C5F0A5 /* SF-Compact-Display-Semibold.otf in Resources */,
 				2C5A55D427D6B35600C5F0A5 /* SF-Pro-Rounded-Thin.otf in Resources */,
@@ -724,10 +728,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C0F722B27D64FBF007253DC /* ViewController.swift in Sources */,
+				2CD8502627D8F7F70093F37E /* ResultBarView.swift in Sources */,
 				2C0F722727D64FBF007253DC /* AppDelegate.swift in Sources */,
 				2C0C349427D7FC86004097EC /* ResultViewItem.swift in Sources */,
 				2C0C348E27D7FB35004097EC /* ResultTableViewCell.swift in Sources */,
-				2C0C349227D7FBA9004097EC /* ResultBarView.swift in Sources */,
 				2C0F722927D64FBF007253DC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
