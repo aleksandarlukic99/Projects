@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Display-Regular.otf">
+            <string>SFProDisplay-Regular</string>
+        </array>
+        <array key="SF-Pro-Display-Semibold.otf">
+            <string>SFProDisplay-Semibold</string>
+        </array>
+        <array key="SF-Pro-Text-Medium.otf">
+            <string>SFProText-Medium</string>
+        </array>
+        <array key="SF-Pro-Text-Regular.otf">
+            <string>SFProText-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="248" id="ZBv-v1-b4P" customClass="ResultTableViewCell" customModule="UNCODE" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="248"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZBv-v1-b4P" id="bmP-Qa-Rrh">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="248"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sport Type" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vz1-y1-uZz">
+                        <rect key="frame" x="20" y="20" width="72.5" height="19.5"/>
+                        <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="16"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="0.51000000000000001" colorSpace="custom" customColorSpace="displayP3"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Endurance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eGZ-Q1-8uO">
+                        <rect key="frame" x="20" y="44.5" width="133.5" height="33.5"/>
+                        <fontDescription key="fontDescription" name="SFProDisplay-Semibold" family="SF Pro Display" pointSize="28"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Suitable sport to reduce your body fat percentage. Time required:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lqk-mA-VDP">
+                        <rect key="frame" x="20" y="98" width="335" height="50.5"/>
+                        <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="fast" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tDV-8e-cgi">
+                        <rect key="frame" x="20" y="203.5" width="22.5" height="14.5"/>
+                        <fontDescription key="fontDescription" name="SFProText-Medium" family="SF Pro Text" pointSize="12"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="0.51142229350000001" colorSpace="custom" customColorSpace="displayP3"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="normal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pJg-bb-w2c">
+                        <rect key="frame" x="167.5" y="203.5" width="40.5" height="14.5"/>
+                        <fontDescription key="fontDescription" name="SFProText-Medium" family="SF Pro Text" pointSize="12"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="0.51142229350000001" colorSpace="custom" customColorSpace="displayP3"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GxP-9D-X75" customClass="ResultBarView" customModule="UNCODE" customModuleProvider="target">
+                        <rect key="frame" x="20" y="158.5" width="335" height="40"/>
+                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <accessibility key="accessibilityConfiguration">
+                            <accessibilityTraits key="traits" notEnabled="YES"/>
+                        </accessibility>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="bhB-lx-hXR"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="slow" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ndn-DV-D54">
+                        <rect key="frame" x="328.5" y="203.5" width="26.5" height="14.5"/>
+                        <fontDescription key="fontDescription" name="SFProText-Medium" family="SF Pro Text" pointSize="12"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="0.51142229350000001" colorSpace="custom" customColorSpace="displayP3"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" red="0.1112949332" green="0.1112949332" blue="0.1112949332" alpha="0.85653281699999995" colorSpace="custom" customColorSpace="displayP3"/>
+                <constraints>
+                    <constraint firstItem="Ndn-DV-D54" firstAttribute="top" secondItem="GxP-9D-X75" secondAttribute="bottom" constant="5" id="3lV-qm-4pr"/>
+                    <constraint firstAttribute="trailing" secondItem="GxP-9D-X75" secondAttribute="trailing" constant="20" id="DKK-c7-Xpb"/>
+                    <constraint firstItem="pJg-bb-w2c" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="tDV-8e-cgi" secondAttribute="trailing" constant="8" symbolic="YES" id="DdM-9r-jaf"/>
+                    <constraint firstItem="tDV-8e-cgi" firstAttribute="centerY" secondItem="pJg-bb-w2c" secondAttribute="centerY" id="JxW-Oh-cBP"/>
+                    <constraint firstItem="Ndn-DV-D54" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="pJg-bb-w2c" secondAttribute="trailing" constant="8" symbolic="YES" id="K2z-Vt-rMH"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="vz1-y1-uZz" secondAttribute="trailing" constant="20" symbolic="YES" id="Obt-Ll-fL9"/>
+                    <constraint firstAttribute="bottom" secondItem="tDV-8e-cgi" secondAttribute="bottom" constant="30" id="S7k-jx-hmR"/>
+                    <constraint firstItem="eGZ-Q1-8uO" firstAttribute="top" secondItem="vz1-y1-uZz" secondAttribute="bottom" constant="5" id="Tk6-eH-M2n"/>
+                    <constraint firstItem="vz1-y1-uZz" firstAttribute="top" secondItem="bmP-Qa-Rrh" secondAttribute="top" constant="20" id="Wsq-X4-1gE"/>
+                    <constraint firstItem="GxP-9D-X75" firstAttribute="leading" secondItem="bmP-Qa-Rrh" secondAttribute="leading" constant="20" id="Z2v-YK-k5S"/>
+                    <constraint firstItem="eGZ-Q1-8uO" firstAttribute="leading" secondItem="bmP-Qa-Rrh" secondAttribute="leading" constant="20" id="a9K-Vq-QcZ"/>
+                    <constraint firstAttribute="trailing" secondItem="Lqk-mA-VDP" secondAttribute="trailing" constant="20" id="cJ4-Tb-rvZ"/>
+                    <constraint firstItem="tDV-8e-cgi" firstAttribute="top" secondItem="GxP-9D-X75" secondAttribute="bottom" constant="5" id="coh-h0-3ZY"/>
+                    <constraint firstItem="pJg-bb-w2c" firstAttribute="centerX" secondItem="GxP-9D-X75" secondAttribute="centerX" id="ewl-BN-pGg"/>
+                    <constraint firstItem="pJg-bb-w2c" firstAttribute="centerY" secondItem="Ndn-DV-D54" secondAttribute="centerY" id="fA6-Yx-cJM"/>
+                    <constraint firstItem="vz1-y1-uZz" firstAttribute="leading" secondItem="bmP-Qa-Rrh" secondAttribute="leading" constant="20" id="gsa-wp-oLH"/>
+                    <constraint firstAttribute="trailing" secondItem="Ndn-DV-D54" secondAttribute="trailing" constant="20" id="idU-YD-9O0"/>
+                    <constraint firstItem="GxP-9D-X75" firstAttribute="top" secondItem="Lqk-mA-VDP" secondAttribute="bottom" constant="10" id="inq-oN-5yF"/>
+                    <constraint firstItem="pJg-bb-w2c" firstAttribute="baseline" secondItem="Ndn-DV-D54" secondAttribute="baseline" id="mSF-As-392"/>
+                    <constraint firstItem="Lqk-mA-VDP" firstAttribute="top" secondItem="eGZ-Q1-8uO" secondAttribute="bottom" constant="20" id="oIn-YO-kRT"/>
+                    <constraint firstItem="Lqk-mA-VDP" firstAttribute="leading" secondItem="bmP-Qa-Rrh" secondAttribute="leading" constant="20" id="wMe-6D-MSH"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="eGZ-Q1-8uO" secondAttribute="trailing" constant="20" symbolic="YES" id="xRb-pL-d8V"/>
+                    <constraint firstItem="tDV-8e-cgi" firstAttribute="leading" secondItem="bmP-Qa-Rrh" secondAttribute="leading" constant="20" id="xg4-aS-9w8"/>
+                    <constraint firstItem="pJg-bb-w2c" firstAttribute="top" secondItem="GxP-9D-X75" secondAttribute="bottom" constant="5" id="z8h-Gm-ZEg"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="infoLabel" destination="Lqk-mA-VDP" id="9fI-nb-vmy"/>
+                <outlet property="subtitleLabel" destination="vz1-y1-uZz" id="gsC-g6-lCd"/>
+                <outlet property="titleLabel" destination="eGZ-Q1-8uO" id="s5T-d0-KcS"/>
+            </connections>
+            <point key="canvasLocation" x="159" y="-27"/>
+        </tableViewCell>
+    </objects>
+</document>

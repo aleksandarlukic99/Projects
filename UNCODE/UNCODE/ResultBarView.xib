@@ -10,14 +10,26 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ResultBarView" customModule="UNCODE" customModuleProvider="target">
             <connections>
                 <outlet property="contentView" destination="iN0-l3-epB" id="cpg-Nj-y1Z"/>
+                <outlet property="stackView" destination="HOb-Gh-Xy9" id="YtW-dP-1bD"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="335" height="40"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="HOb-Gh-Xy9">
+                    <rect key="frame" x="0.0" y="0.0" width="335" height="40"/>
+                </stackView>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="HOb-Gh-Xy9" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Jvv-gR-hq1"/>
+                <constraint firstItem="HOb-Gh-Xy9" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="a0s-5q-AP5"/>
+                <constraint firstAttribute="bottom" secondItem="HOb-Gh-Xy9" secondAttribute="bottom" id="hvd-WR-gNy"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="HOb-Gh-Xy9" secondAttribute="trailing" id="kc9-lV-yut"/>
+            </constraints>
             <nil key="simulatedTopBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="-575.20000000000005" y="22.938530734632685"/>

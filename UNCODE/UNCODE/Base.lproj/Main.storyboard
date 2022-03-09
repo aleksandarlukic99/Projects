@@ -7,20 +7,6 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="SF-Pro-Display-Regular.otf">
-            <string>SFProDisplay-Regular</string>
-        </array>
-        <array key="SF-Pro-Display-Semibold.otf">
-            <string>SFProDisplay-Semibold</string>
-        </array>
-        <array key="SF-Pro-Text-Medium.otf">
-            <string>SFProText-Medium</string>
-        </array>
-        <array key="SF-Pro-Text-Regular.otf">
-            <string>SFProText-Regular</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -33,96 +19,6 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="COd-KS-7si">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="resultCell" rowHeight="248" id="EE2-J0-UAp" customClass="ResultTableViewCell" customModule="UNCODE" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="375" height="248"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EE2-J0-UAp" id="iyy-6E-B0y">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="248"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sport Type" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lv6-g8-0wo">
-                                                    <rect key="frame" x="20" y="20" width="72.5" height="19.5"/>
-                                                    <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="16"/>
-                                                    <color key="textColor" red="1" green="1" blue="1" alpha="0.51000000000000001" colorSpace="custom" customColorSpace="displayP3"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Endurance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uvi-o6-AEn">
-                                                    <rect key="frame" x="20" y="44.5" width="133.5" height="33.5"/>
-                                                    <fontDescription key="fontDescription" name="SFProDisplay-Semibold" family="SF Pro Display" pointSize="28"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Suitable sport to reduce your body fat percentage. Time required:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K60-PC-TOH">
-                                                    <rect key="frame" x="20" y="98" width="335" height="50.5"/>
-                                                    <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="16"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="fast" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eAc-if-LkU">
-                                                    <rect key="frame" x="20" y="203.5" width="22.5" height="14.5"/>
-                                                    <fontDescription key="fontDescription" name="SFProText-Medium" family="SF Pro Text" pointSize="12"/>
-                                                    <color key="textColor" red="1" green="1" blue="1" alpha="0.51142229350000001" colorSpace="custom" customColorSpace="displayP3"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="normal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QW4-qS-vUn">
-                                                    <rect key="frame" x="167.5" y="203.5" width="40.5" height="14.5"/>
-                                                    <fontDescription key="fontDescription" name="SFProText-Medium" family="SF Pro Text" pointSize="12"/>
-                                                    <color key="textColor" red="1" green="1" blue="1" alpha="0.51142229350000001" colorSpace="custom" customColorSpace="displayP3"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IHX-e0-WSy" customClass="ResultBarView" customModule="UNCODE" customModuleProvider="target">
-                                                    <rect key="frame" x="20" y="158.5" width="335" height="40"/>
-                                                    <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <accessibility key="accessibilityConfiguration">
-                                                        <accessibilityTraits key="traits" notEnabled="YES"/>
-                                                    </accessibility>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="40" id="cru-E1-nST"/>
-                                                    </constraints>
-                                                </view>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="slow" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TmW-mp-oRH">
-                                                    <rect key="frame" x="328.5" y="203.5" width="26.5" height="14.5"/>
-                                                    <fontDescription key="fontDescription" name="SFProText-Medium" family="SF Pro Text" pointSize="12"/>
-                                                    <color key="textColor" red="1" green="1" blue="1" alpha="0.51142229350000001" colorSpace="custom" customColorSpace="displayP3"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <color key="backgroundColor" red="0.1112949332011115" green="0.1112949332011115" blue="0.1112949332011115" alpha="0.85653281698421557" colorSpace="custom" customColorSpace="displayP3"/>
-                                            <constraints>
-                                                <constraint firstItem="TmW-mp-oRH" firstAttribute="top" secondItem="IHX-e0-WSy" secondAttribute="bottom" constant="5" id="4Ny-PC-tr0"/>
-                                                <constraint firstItem="eAc-if-LkU" firstAttribute="leading" secondItem="iyy-6E-B0y" secondAttribute="leading" constant="20" id="52u-2A-a2j"/>
-                                                <constraint firstItem="TmW-mp-oRH" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="QW4-qS-vUn" secondAttribute="trailing" constant="8" symbolic="YES" id="5Bc-ef-cSS"/>
-                                                <constraint firstItem="Uvi-o6-AEn" firstAttribute="leading" secondItem="iyy-6E-B0y" secondAttribute="leading" constant="20" id="6lh-wf-Knq"/>
-                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Uvi-o6-AEn" secondAttribute="trailing" constant="20" symbolic="YES" id="B8J-6e-5qB"/>
-                                                <constraint firstItem="K60-PC-TOH" firstAttribute="top" secondItem="Uvi-o6-AEn" secondAttribute="bottom" constant="20" id="BSo-KN-pPn"/>
-                                                <constraint firstItem="eAc-if-LkU" firstAttribute="centerY" secondItem="QW4-qS-vUn" secondAttribute="centerY" id="DzN-qQ-NJJ"/>
-                                                <constraint firstItem="QW4-qS-vUn" firstAttribute="centerY" secondItem="TmW-mp-oRH" secondAttribute="centerY" id="JWs-Fn-MZ6"/>
-                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="lv6-g8-0wo" secondAttribute="trailing" constant="20" symbolic="YES" id="KeW-9X-cwt"/>
-                                                <constraint firstItem="QW4-qS-vUn" firstAttribute="top" secondItem="IHX-e0-WSy" secondAttribute="bottom" constant="5" id="LVP-J2-p6C"/>
-                                                <constraint firstItem="IHX-e0-WSy" firstAttribute="leading" secondItem="iyy-6E-B0y" secondAttribute="leading" constant="20" id="Sk8-M5-MY0"/>
-                                                <constraint firstAttribute="bottom" secondItem="eAc-if-LkU" secondAttribute="bottom" constant="30" id="bHV-4K-Vac"/>
-                                                <constraint firstItem="eAc-if-LkU" firstAttribute="top" secondItem="IHX-e0-WSy" secondAttribute="bottom" constant="5" id="eOo-nX-ZS3"/>
-                                                <constraint firstItem="lv6-g8-0wo" firstAttribute="leading" secondItem="iyy-6E-B0y" secondAttribute="leading" constant="20" id="hrF-Jl-fNF"/>
-                                                <constraint firstItem="QW4-qS-vUn" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="eAc-if-LkU" secondAttribute="trailing" constant="8" symbolic="YES" id="hrz-2f-cCD"/>
-                                                <constraint firstAttribute="trailing" secondItem="IHX-e0-WSy" secondAttribute="trailing" constant="20" id="iSc-E4-ZXL"/>
-                                                <constraint firstItem="lv6-g8-0wo" firstAttribute="top" secondItem="iyy-6E-B0y" secondAttribute="top" constant="20" id="jTt-TS-pNA"/>
-                                                <constraint firstAttribute="trailing" secondItem="K60-PC-TOH" secondAttribute="trailing" constant="20" id="kyT-Qm-2WJ"/>
-                                                <constraint firstItem="QW4-qS-vUn" firstAttribute="baseline" secondItem="TmW-mp-oRH" secondAttribute="baseline" id="lPi-rV-Qky"/>
-                                                <constraint firstItem="QW4-qS-vUn" firstAttribute="centerX" secondItem="IHX-e0-WSy" secondAttribute="centerX" id="ovI-b3-VqI"/>
-                                                <constraint firstAttribute="trailing" secondItem="TmW-mp-oRH" secondAttribute="trailing" constant="20" id="sZv-5V-rus"/>
-                                                <constraint firstItem="Uvi-o6-AEn" firstAttribute="top" secondItem="lv6-g8-0wo" secondAttribute="bottom" constant="5" id="w3L-0L-qrl"/>
-                                                <constraint firstItem="K60-PC-TOH" firstAttribute="leading" secondItem="iyy-6E-B0y" secondAttribute="leading" constant="20" id="xbh-4l-8Ml"/>
-                                                <constraint firstItem="IHX-e0-WSy" firstAttribute="top" secondItem="K60-PC-TOH" secondAttribute="bottom" constant="10" id="yLa-T7-kaL"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="infoLabel" destination="K60-PC-TOH" id="t8m-G5-vbl"/>
-                                            <outlet property="subtitleLabel" destination="lv6-g8-0wo" id="whX-hf-gLO"/>
-                                            <outlet property="titleLabel" destination="Uvi-o6-AEn" id="qop-Dy-Wsh"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>

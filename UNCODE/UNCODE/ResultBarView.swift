@@ -8,10 +8,11 @@
 import UIKit
 
 class ResultBarView: UIView {
-
+    // MARK: - Properties
     @IBOutlet var contentView: UIView!
-    
-    
+    @IBOutlet weak var stackView: UIStackView!
+
+    // MARK: - Init
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
@@ -21,52 +22,46 @@ class ResultBarView: UIView {
         super.init(coder: coder)
         commonInit()
     }
-    
-    private func commonInit() {
+
+    // MARK: - Lifecycle
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        stackView
+            .spacing(stackView.frame.width / 99)
+    }
+}
+
+//MARK: - View setup
+private extension ResultBarView {
+    func commonInit() {
         Bundle.main.loadNibNamed("ResultBarView", owner: self, options: nil)
         addSubview(contentView)
         contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
-    }
-    
-    override func draw(_ rect: CGRect) {
-        let green = (0...15)
-        let yellow = (16...33)
-        let red = (34...48)
-        for i in green {
-            greenLine(x: CGFloat(2 + (i * 6)))
+
+        let redView = UIView()
+        redView
+            .backgroundColor(.red)
+        let greenView = UIView()
+        greenView
+            .backgroundColor(.green)
+
+        for i in 0...49 {
+            var color: UIColor
+
+            switch i {
+            case 0...15:
+                color = R.color.green()!
+            case 16...33:
+                color = R.color.yellow()!
+            case 34...50:
+                color = R.color.alertRed()!
+            default:
+                fatalError()
+            }
+            let bar = UIView()
+                .backgroundColor(color)
+
+            stackView.addArrangedSubview(bar)
         }
-        for i in yellow {
-            yellowLine(x: CGFloat(2 + (i * 6)))
-        }
-        for i in red {
-            redLine(x: CGFloat(2 + (i * 6)))
-        }
-    }
-    
-    func greenLine(x: CGFloat) {
-        let context = UIGraphicsGetCurrentContext()
-        context?.setLineWidth(2.0)
-        context?.setStrokeColor(UIColor(named: "Green")!.cgColor)
-        context?.move(to: CGPoint(x: x, y: 15))
-        context?.addLine(to: CGPoint(x: x, y: 40))
-        context?.strokePath()
-    }
-    
-    func yellowLine(x: CGFloat) {
-        let context = UIGraphicsGetCurrentContext()
-        context?.setLineWidth(2.0)
-        context?.setStrokeColor(UIColor(named: "Yellow")!.cgColor)
-        context?.move(to: CGPoint(x: x, y: 15))
-        context?.addLine(to: CGPoint(x: x, y: 40))
-        context?.strokePath()
-    }
-    
-    func redLine(x: CGFloat) {
-        let context = UIGraphicsGetCurrentContext()
-        context?.setLineWidth(2.0)
-        context?.setStrokeColor(UIColor(named: "Alert - red")!.cgColor)
-        context?.move(to: CGPoint(x: x, y: 15))
-        context?.addLine(to: CGPoint(x: x, y: 40))
-        context?.strokePath()
     }
 }
