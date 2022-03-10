@@ -148,6 +148,12 @@
 		2C5A563027D6B3ED00C5F0A5 /* Rubik-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2C5A562E27D6B3ED00C5F0A5 /* Rubik-VariableFont_wght.ttf */; };
 		2C5A563327D6B41800C5F0A5 /* Montserrat-Italic-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2C5A563127D6B41700C5F0A5 /* Montserrat-Italic-VariableFont_wght.ttf */; };
 		2C5A563427D6B41800C5F0A5 /* Montserrat-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2C5A563227D6B41700C5F0A5 /* Montserrat-VariableFont_wght.ttf */; };
+		2C7DD75927DA437A00863CD8 /* MetabolicTypeCellItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7DD75827DA437A00863CD8 /* MetabolicTypeCellItem.swift */; };
+		2C7DD75D27DA43E100863CD8 /* ListCellItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7DD75C27DA43E100863CD8 /* ListCellItem.swift */; };
+		2C7DD76427DA518D00863CD8 /* MetabolicTypeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7DD76227DA518D00863CD8 /* MetabolicTypeTableViewCell.swift */; };
+		2C7DD76527DA518D00863CD8 /* MetabolicTypeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C7DD76327DA518D00863CD8 /* MetabolicTypeTableViewCell.xib */; };
+		2C7DD76827DA67F800863CD8 /* MetabolicTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7DD76727DA67F800863CD8 /* MetabolicTypeView.swift */; };
+		2C7DD76A27DA681300863CD8 /* MetabolicTypeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C7DD76927DA681300863CD8 /* MetabolicTypeView.xib */; };
 		2CD8502627D8F7F70093F37E /* ResultBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD8502527D8F7F70093F37E /* ResultBarView.swift */; };
 		2CD8502A27D8FBCE0093F37E /* ResultBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CD8502927D8FBCE0093F37E /* ResultBarView.xib */; };
 		6CADD04D27D9631E003DE5C2 /* UIStackView+AttributeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CADD04327D9631E003DE5C2 /* UIStackView+AttributeBuilder.swift */; };
@@ -309,6 +315,12 @@
 		2C5A562E27D6B3ED00C5F0A5 /* Rubik-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		2C5A563127D6B41700C5F0A5 /* Montserrat-Italic-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Italic-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		2C5A563227D6B41700C5F0A5 /* Montserrat-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-VariableFont_wght.ttf"; sourceTree = "<group>"; };
+		2C7DD75827DA437A00863CD8 /* MetabolicTypeCellItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetabolicTypeCellItem.swift; sourceTree = "<group>"; };
+		2C7DD75C27DA43E100863CD8 /* ListCellItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCellItem.swift; sourceTree = "<group>"; };
+		2C7DD76227DA518D00863CD8 /* MetabolicTypeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetabolicTypeTableViewCell.swift; sourceTree = "<group>"; };
+		2C7DD76327DA518D00863CD8 /* MetabolicTypeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MetabolicTypeTableViewCell.xib; sourceTree = "<group>"; };
+		2C7DD76727DA67F800863CD8 /* MetabolicTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetabolicTypeView.swift; sourceTree = "<group>"; };
+		2C7DD76927DA681300863CD8 /* MetabolicTypeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MetabolicTypeView.xib; sourceTree = "<group>"; };
 		2CD8502527D8F7F70093F37E /* ResultBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultBarView.swift; sourceTree = "<group>"; };
 		2CD8502927D8FBCE0093F37E /* ResultBarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultBarView.xib; sourceTree = "<group>"; };
 		6CADD04327D9631E003DE5C2 /* UIStackView+AttributeBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStackView+AttributeBuilder.swift"; sourceTree = "<group>"; };
@@ -367,12 +379,10 @@
 				2C0F722627D64FBF007253DC /* AppDelegate.swift */,
 				2C0F722827D64FBF007253DC /* SceneDelegate.swift */,
 				2C0F722C27D64FBF007253DC /* Main.storyboard */,
-				2CD8502927D8FBCE0093F37E /* ResultBarView.xib */,
 				2C0F722F27D64FC1007253DC /* Assets.xcassets */,
 				2C0F723127D64FC1007253DC /* LaunchScreen.storyboard */,
 				2C0F723427D64FC1007253DC /* Info.plist */,
-				2C0C349327D7FC86004097EC /* ResultViewItem.swift */,
-				2CD8502527D8F7F70093F37E /* ResultBarView.swift */,
+				2C7DD75C27DA43E100863CD8 /* ListCellItem.swift */,
 			);
 			path = UNCODE;
 			sourceTree = "<group>";
@@ -556,6 +566,60 @@
 			path = Inter;
 			sourceTree = "<group>";
 		};
+		2C7DD75E27DA452E00863CD8 /* Custom views */ = {
+			isa = PBXGroup;
+			children = (
+				2C7DD76627DA67B400863CD8 /* MetabolicTypeView */,
+				2C7DD75F27DA457000863CD8 /* ResultBarView */,
+			);
+			path = "Custom views";
+			sourceTree = "<group>";
+		};
+		2C7DD75F27DA457000863CD8 /* ResultBarView */ = {
+			isa = PBXGroup;
+			children = (
+				2C7DD76027DA45AD00863CD8 /* Data model */,
+				2CD8502927D8FBCE0093F37E /* ResultBarView.xib */,
+				2CD8502527D8F7F70093F37E /* ResultBarView.swift */,
+			);
+			path = ResultBarView;
+			sourceTree = "<group>";
+		};
+		2C7DD76027DA45AD00863CD8 /* Data model */ = {
+			isa = PBXGroup;
+			children = (
+				2C0C349327D7FC86004097EC /* ResultViewItem.swift */,
+			);
+			path = "Data model";
+			sourceTree = "<group>";
+		};
+		2C7DD76127DA50F900863CD8 /* MetabolicTypeCell */ = {
+			isa = PBXGroup;
+			children = (
+				2C7DD76227DA518D00863CD8 /* MetabolicTypeTableViewCell.swift */,
+				2C7DD76327DA518D00863CD8 /* MetabolicTypeTableViewCell.xib */,
+			);
+			path = MetabolicTypeCell;
+			sourceTree = "<group>";
+		};
+		2C7DD76627DA67B400863CD8 /* MetabolicTypeView */ = {
+			isa = PBXGroup;
+			children = (
+				2C7DD76B27DA681C00863CD8 /* Data model */,
+				2C7DD76727DA67F800863CD8 /* MetabolicTypeView.swift */,
+				2C7DD76927DA681300863CD8 /* MetabolicTypeView.xib */,
+			);
+			path = MetabolicTypeView;
+			sourceTree = "<group>";
+		};
+		2C7DD76B27DA681C00863CD8 /* Data model */ = {
+			isa = PBXGroup;
+			children = (
+				2C7DD75827DA437A00863CD8 /* MetabolicTypeCellItem.swift */,
+			);
+			path = "Data model";
+			sourceTree = "<group>";
+		};
 		6A64F9961D69FA2EE0DB6767 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -612,6 +676,7 @@
 		6CDB2C6227D96CF10052C6B3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				2C7DD75E27DA452E00863CD8 /* Custom views */,
 				6CDB2C6527D96D140052C6B3 /* Cells */,
 			);
 			path = Views;
@@ -620,6 +685,7 @@
 		6CDB2C6527D96D140052C6B3 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				2C7DD76127DA50F900863CD8 /* MetabolicTypeCell */,
 				6CDB2C6627D96D1A0052C6B3 /* ResultTableViewCell */,
 			);
 			path = Cells;
@@ -816,6 +882,7 @@
 				2C5A55B427D6B35600C5F0A5 /* SF-Pro-Text-Semibold.otf in Resources */,
 				2C5A55E227D6B35600C5F0A5 /* SF-Pro-Display-MediumItalic.otf in Resources */,
 				2C5A55B327D6B35600C5F0A5 /* SF-Compact-Italic.ttf in Resources */,
+				2C7DD76527DA518D00863CD8 /* MetabolicTypeTableViewCell.xib in Resources */,
 				2C5A55D827D6B35600C5F0A5 /* SF-Pro-Text-UltralightItalic.otf in Resources */,
 				2C5A561327D6B3A100C5F0A5 /* Rubik-Italic.ttf in Resources */,
 				2C5A55C827D6B35600C5F0A5 /* SF-Pro-Display-Semibold.otf in Resources */,
@@ -837,6 +904,7 @@
 				2C5A55CE27D6B35600C5F0A5 /* SF-Compact-Text-Ultralight.otf in Resources */,
 				2C0F722E27D64FBF007253DC /* Main.storyboard in Resources */,
 				2C5A563427D6B41800C5F0A5 /* Montserrat-VariableFont_wght.ttf in Resources */,
+				2C7DD76A27DA681300863CD8 /* MetabolicTypeView.xib in Resources */,
 				2C5A55D127D6B35600C5F0A5 /* SF-Pro-Text-BlackItalic.otf in Resources */,
 				2C5A554F27D6B32100C5F0A5 /* Montserrat-ExtraLightItalic.ttf in Resources */,
 				2C5A562627D6B3BA00C5F0A5 /* Inter-Regular.ttf in Resources */,
@@ -904,6 +972,7 @@
 				6CADD04F27D9631E003DE5C2 /* UITextView+AttributeBuilder.swift in Sources */,
 				6CADD05527D9631E003DE5C2 /* UILabel+AttributeBuilder.swift in Sources */,
 				2C0F722B27D64FBF007253DC /* ViewController.swift in Sources */,
+				2C7DD76427DA518D00863CD8 /* MetabolicTypeTableViewCell.swift in Sources */,
 				2CD8502627D8F7F70093F37E /* ResultBarView.swift in Sources */,
 				6CADD05127D9631E003DE5C2 /* UIScrollView+AttributeBuilder.swift in Sources */,
 				6CADD05427D9631E003DE5C2 /* CALayer+AttributeBuilder.swift in Sources */,
@@ -913,12 +982,15 @@
 				6CADD04E27D9631E003DE5C2 /* UIImageView+AttributeBuilder.swift in Sources */,
 				6CADD05327D9631E003DE5C2 /* UITableView+AttributeBuilder.swift in Sources */,
 				6CADD04D27D9631E003DE5C2 /* UIStackView+AttributeBuilder.swift in Sources */,
+				2C7DD75D27DA43E100863CD8 /* ListCellItem.swift in Sources */,
 				6CDB2C6927D96E560052C6B3 /* Reusable.swift in Sources */,
 				2C0C349427D7FC86004097EC /* ResultViewItem.swift in Sources */,
 				2C0C348E27D7FB35004097EC /* ResultTableViewCell.swift in Sources */,
 				6CADD05027D9631E003DE5C2 /* UITextField+AttributeBuilder.swift in Sources */,
 				6CADD05227D9631E003DE5C2 /* UIButton+AttributeBuilder.swift in Sources */,
+				2C7DD75927DA437A00863CD8 /* MetabolicTypeCellItem.swift in Sources */,
 				2C0F722927D64FBF007253DC /* SceneDelegate.swift in Sources */,
+				2C7DD76827DA67F800863CD8 /* MetabolicTypeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

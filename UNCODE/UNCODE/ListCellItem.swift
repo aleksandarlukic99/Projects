@@ -6,3 +6,15 @@
 //
 
 import Foundation
+import UIKit
+
+struct ListCellItem {
+    struct Item {
+        let title: String
+        let detail: String
+        let detailColor: UIColor
+    }
+    
+    let title: String
+    let items: [Item]
+}

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Display-Regular.otf">
+            <string>SFProDisplay-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MetabolicTypeView" customModule="UNCODE" customModuleProvider="target">
+            <connections>
+                <outlet property="backgroundView" destination="iN0-l3-epB" id="10k-B0-coy"/>
+                <outlet property="detailPercent" destination="Xz5-0H-Osm" id="Z5E-ti-uZg"/>
+                <outlet property="percentView" destination="zDe-o3-wJc" id="fj6-8x-6N8"/>
+                <outlet property="percentViewTrailingConstraint" destination="3h9-Gw-t10" id="8P6-rf-xQ1"/>
+                <outlet property="titleLabel" destination="zw1-qI-0gz" id="SFY-PY-ueT"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="335" height="45"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zDe-o3-wJc">
+                    <rect key="frame" x="0.0" y="0.0" width="335" height="45"/>
+                    <color key="backgroundColor" red="0.0" green="0.76862745099999996" blue="0.6588235294" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zw1-qI-0gz">
+                    <rect key="frame" x="10" y="12.5" width="24.5" height="20"/>
+                    <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="16"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="detail%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xz5-0H-Osm">
+                    <rect key="frame" x="265.5" y="12.5" width="49.5" height="20"/>
+                    <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="16"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Xz5-0H-Osm" secondAttribute="trailing" constant="20" id="0Ic-qJ-KgR"/>
+                <constraint firstAttribute="trailing" secondItem="zDe-o3-wJc" secondAttribute="trailing" id="3h9-Gw-t10"/>
+                <constraint firstItem="zw1-qI-0gz" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Vxa-02-1zi"/>
+                <constraint firstItem="zDe-o3-wJc" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="YB4-qu-M9g"/>
+                <constraint firstItem="Xz5-0H-Osm" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Z67-GL-MNy"/>
+                <constraint firstAttribute="bottom" secondItem="zDe-o3-wJc" secondAttribute="bottom" id="mhM-Fq-5hq"/>
+                <constraint firstItem="zw1-qI-0gz" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="oVL-bK-lET"/>
+                <constraint firstItem="zDe-o3-wJc" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ufd-HD-mmN"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="390.57971014492756" y="138.95089285714286"/>
+        </view>
+    </objects>
+</document>

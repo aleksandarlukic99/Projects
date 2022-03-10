@@ -9,9 +9,12 @@ import UIKit
 
 class ResultBarView: UIView {
     // MARK: - Properties
-    @IBOutlet var contentView: UIView!
+    @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var stackView: UIStackView!
-
+    @IBOutlet weak var leftLabel: UILabel!
+    @IBOutlet weak var midLabel: UILabel!
+    @IBOutlet weak var rightLabel: UILabel!
+    
     // MARK: - Init
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -38,13 +41,6 @@ private extension ResultBarView {
         addSubview(contentView)
         contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
 
-        let redView = UIView()
-        redView
-            .backgroundColor(.red)
-        let greenView = UIView()
-        greenView
-            .backgroundColor(.green)
-
         for i in 0...49 {
             var color: UIColor
 
@@ -53,7 +49,7 @@ private extension ResultBarView {
                 color = R.color.green()!
             case 16...33:
                 color = R.color.yellow()!
-            case 34...50:
+            case 34...49:
                 color = R.color.alertRed()!
             default:
                 fatalError()

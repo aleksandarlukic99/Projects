@@ -119,28 +119,28 @@ struct R: Rswift.Validatable {
   struct color {
     /// Color `AccentColor`.
     static let accentColor = Rswift.ColorResource(bundle: R.hostingBundle, name: "AccentColor")
+    /// Color `Background`.
+    static let background = Rswift.ColorResource(bundle: R.hostingBundle, name: "Background")
+    /// Color `Divider`.
+    static let divider = Rswift.ColorResource(bundle: R.hostingBundle, name: "Divider")
+    /// Color `Green`.
+    static let green = Rswift.ColorResource(bundle: R.hostingBundle, name: "Green")
+    /// Color `Pink`.
+    static let pink = Rswift.ColorResource(bundle: R.hostingBundle, name: "Pink")
+    /// Color `Primary`.
+    static let primary = Rswift.ColorResource(bundle: R.hostingBundle, name: "Primary")
+    /// Color `Secondary`.
+    static let secondary = Rswift.ColorResource(bundle: R.hostingBundle, name: "Secondary")
+    /// Color `Text`.
+    static let text = Rswift.ColorResource(bundle: R.hostingBundle, name: "Text")
+    /// Color `Yellow`.
+    static let yellow = Rswift.ColorResource(bundle: R.hostingBundle, name: "Yellow")
     /// Color `alertRed`.
     static let alertRed = Rswift.ColorResource(bundle: R.hostingBundle, name: "alertRed")
-    /// Color `background`.
-    static let background = Rswift.ColorResource(bundle: R.hostingBundle, name: "background")
     /// Color `card`.
     static let card = Rswift.ColorResource(bundle: R.hostingBundle, name: "card")
-    /// Color `divider`.
-    static let divider = Rswift.ColorResource(bundle: R.hostingBundle, name: "divider")
-    /// Color `green`.
-    static let green = Rswift.ColorResource(bundle: R.hostingBundle, name: "green")
     /// Color `modalOverlay`.
     static let modalOverlay = Rswift.ColorResource(bundle: R.hostingBundle, name: "modalOverlay")
-    /// Color `pink`.
-    static let pink = Rswift.ColorResource(bundle: R.hostingBundle, name: "pink")
-    /// Color `primary`.
-    static let primary = Rswift.ColorResource(bundle: R.hostingBundle, name: "primary")
-    /// Color `secondary`.
-    static let secondary = Rswift.ColorResource(bundle: R.hostingBundle, name: "secondary")
-    /// Color `text`.
-    static let text = Rswift.ColorResource(bundle: R.hostingBundle, name: "text")
-    /// Color `yellow`.
-    static let yellow = Rswift.ColorResource(bundle: R.hostingBundle, name: "yellow")
 
     #if os(iOS) || os(tvOS)
     /// `UIColor(named: "AccentColor", bundle: ..., traitCollection: ...)`
@@ -148,6 +148,78 @@ struct R: Rswift.Validatable {
     @available(iOS 11.0, *)
     static func accentColor(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
       return UIKit.UIColor(resource: R.color.accentColor, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIColor(named: "Background", bundle: ..., traitCollection: ...)`
+    @available(tvOS 11.0, *)
+    @available(iOS 11.0, *)
+    static func background(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.background, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIColor(named: "Divider", bundle: ..., traitCollection: ...)`
+    @available(tvOS 11.0, *)
+    @available(iOS 11.0, *)
+    static func divider(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.divider, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIColor(named: "Green", bundle: ..., traitCollection: ...)`
+    @available(tvOS 11.0, *)
+    @available(iOS 11.0, *)
+    static func green(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.green, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIColor(named: "Pink", bundle: ..., traitCollection: ...)`
+    @available(tvOS 11.0, *)
+    @available(iOS 11.0, *)
+    static func pink(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.pink, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIColor(named: "Primary", bundle: ..., traitCollection: ...)`
+    @available(tvOS 11.0, *)
+    @available(iOS 11.0, *)
+    static func primary(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.primary, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIColor(named: "Secondary", bundle: ..., traitCollection: ...)`
+    @available(tvOS 11.0, *)
+    @available(iOS 11.0, *)
+    static func secondary(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.secondary, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIColor(named: "Text", bundle: ..., traitCollection: ...)`
+    @available(tvOS 11.0, *)
+    @available(iOS 11.0, *)
+    static func text(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.text, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIColor(named: "Yellow", bundle: ..., traitCollection: ...)`
+    @available(tvOS 11.0, *)
+    @available(iOS 11.0, *)
+    static func yellow(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.yellow, compatibleWith: traitCollection)
     }
     #endif
 
@@ -161,38 +233,11 @@ struct R: Rswift.Validatable {
     #endif
 
     #if os(iOS) || os(tvOS)
-    /// `UIColor(named: "background", bundle: ..., traitCollection: ...)`
-    @available(tvOS 11.0, *)
-    @available(iOS 11.0, *)
-    static func background(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
-      return UIKit.UIColor(resource: R.color.background, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
     /// `UIColor(named: "card", bundle: ..., traitCollection: ...)`
     @available(tvOS 11.0, *)
     @available(iOS 11.0, *)
     static func card(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
       return UIKit.UIColor(resource: R.color.card, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIColor(named: "divider", bundle: ..., traitCollection: ...)`
-    @available(tvOS 11.0, *)
-    @available(iOS 11.0, *)
-    static func divider(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
-      return UIKit.UIColor(resource: R.color.divider, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIColor(named: "green", bundle: ..., traitCollection: ...)`
-    @available(tvOS 11.0, *)
-    @available(iOS 11.0, *)
-    static func green(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
-      return UIKit.UIColor(resource: R.color.green, compatibleWith: traitCollection)
     }
     #endif
 
@@ -205,56 +250,75 @@ struct R: Rswift.Validatable {
     }
     #endif
 
-    #if os(iOS) || os(tvOS)
-    /// `UIColor(named: "pink", bundle: ..., traitCollection: ...)`
-    @available(tvOS 11.0, *)
-    @available(iOS 11.0, *)
-    static func pink(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
-      return UIKit.UIColor(resource: R.color.pink, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIColor(named: "primary", bundle: ..., traitCollection: ...)`
-    @available(tvOS 11.0, *)
-    @available(iOS 11.0, *)
-    static func primary(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
-      return UIKit.UIColor(resource: R.color.primary, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIColor(named: "secondary", bundle: ..., traitCollection: ...)`
-    @available(tvOS 11.0, *)
-    @available(iOS 11.0, *)
-    static func secondary(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
-      return UIKit.UIColor(resource: R.color.secondary, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIColor(named: "text", bundle: ..., traitCollection: ...)`
-    @available(tvOS 11.0, *)
-    @available(iOS 11.0, *)
-    static func text(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
-      return UIKit.UIColor(resource: R.color.text, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIColor(named: "yellow", bundle: ..., traitCollection: ...)`
-    @available(tvOS 11.0, *)
-    @available(iOS 11.0, *)
-    static func yellow(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
-      return UIKit.UIColor(resource: R.color.yellow, compatibleWith: traitCollection)
-    }
-    #endif
-
     #if os(watchOS)
     /// `UIColor(named: "AccentColor", bundle: ..., traitCollection: ...)`
     @available(watchOSApplicationExtension 4.0, *)
     static func accentColor(_: Void = ()) -> UIKit.UIColor? {
       return UIKit.UIColor(named: R.color.accentColor.name)
+    }
+    #endif
+
+    #if os(watchOS)
+    /// `UIColor(named: "Background", bundle: ..., traitCollection: ...)`
+    @available(watchOSApplicationExtension 4.0, *)
+    static func background(_: Void = ()) -> UIKit.UIColor? {
+      return UIKit.UIColor(named: R.color.background.name)
+    }
+    #endif
+
+    #if os(watchOS)
+    /// `UIColor(named: "Divider", bundle: ..., traitCollection: ...)`
+    @available(watchOSApplicationExtension 4.0, *)
+    static func divider(_: Void = ()) -> UIKit.UIColor? {
+      return UIKit.UIColor(named: R.color.divider.name)
+    }
+    #endif
+
+    #if os(watchOS)
+    /// `UIColor(named: "Green", bundle: ..., traitCollection: ...)`
+    @available(watchOSApplicationExtension 4.0, *)
+    static func green(_: Void = ()) -> UIKit.UIColor? {
+      return UIKit.UIColor(named: R.color.green.name)
+    }
+    #endif
+
+    #if os(watchOS)
+    /// `UIColor(named: "Pink", bundle: ..., traitCollection: ...)`
+    @available(watchOSApplicationExtension 4.0, *)
+    static func pink(_: Void = ()) -> UIKit.UIColor? {
+      return UIKit.UIColor(named: R.color.pink.name)
+    }
+    #endif
+
+    #if os(watchOS)
+    /// `UIColor(named: "Primary", bundle: ..., traitCollection: ...)`
+    @available(watchOSApplicationExtension 4.0, *)
+    static func primary(_: Void = ()) -> UIKit.UIColor? {
+      return UIKit.UIColor(named: R.color.primary.name)
+    }
+    #endif
+
+    #if os(watchOS)
+    /// `UIColor(named: "Secondary", bundle: ..., traitCollection: ...)`
+    @available(watchOSApplicationExtension 4.0, *)
+    static func secondary(_: Void = ()) -> UIKit.UIColor? {
+      return UIKit.UIColor(named: R.color.secondary.name)
+    }
+    #endif
+
+    #if os(watchOS)
+    /// `UIColor(named: "Text", bundle: ..., traitCollection: ...)`
+    @available(watchOSApplicationExtension 4.0, *)
+    static func text(_: Void = ()) -> UIKit.UIColor? {
+      return UIKit.UIColor(named: R.color.text.name)
+    }
+    #endif
+
+    #if os(watchOS)
+    /// `UIColor(named: "Yellow", bundle: ..., traitCollection: ...)`
+    @available(watchOSApplicationExtension 4.0, *)
+    static func yellow(_: Void = ()) -> UIKit.UIColor? {
+      return UIKit.UIColor(named: R.color.yellow.name)
     }
     #endif
 
@@ -267,14 +331,6 @@ struct R: Rswift.Validatable {
     #endif
 
     #if os(watchOS)
-    /// `UIColor(named: "background", bundle: ..., traitCollection: ...)`
-    @available(watchOSApplicationExtension 4.0, *)
-    static func background(_: Void = ()) -> UIKit.UIColor? {
-      return UIKit.UIColor(named: R.color.background.name)
-    }
-    #endif
-
-    #if os(watchOS)
     /// `UIColor(named: "card", bundle: ..., traitCollection: ...)`
     @available(watchOSApplicationExtension 4.0, *)
     static func card(_: Void = ()) -> UIKit.UIColor? {
@@ -283,66 +339,10 @@ struct R: Rswift.Validatable {
     #endif
 
     #if os(watchOS)
-    /// `UIColor(named: "divider", bundle: ..., traitCollection: ...)`
-    @available(watchOSApplicationExtension 4.0, *)
-    static func divider(_: Void = ()) -> UIKit.UIColor? {
-      return UIKit.UIColor(named: R.color.divider.name)
-    }
-    #endif
-
-    #if os(watchOS)
-    /// `UIColor(named: "green", bundle: ..., traitCollection: ...)`
-    @available(watchOSApplicationExtension 4.0, *)
-    static func green(_: Void = ()) -> UIKit.UIColor? {
-      return UIKit.UIColor(named: R.color.green.name)
-    }
-    #endif
-
-    #if os(watchOS)
     /// `UIColor(named: "modalOverlay", bundle: ..., traitCollection: ...)`
     @available(watchOSApplicationExtension 4.0, *)
     static func modalOverlay(_: Void = ()) -> UIKit.UIColor? {
       return UIKit.UIColor(named: R.color.modalOverlay.name)
-    }
-    #endif
-
-    #if os(watchOS)
-    /// `UIColor(named: "pink", bundle: ..., traitCollection: ...)`
-    @available(watchOSApplicationExtension 4.0, *)
-    static func pink(_: Void = ()) -> UIKit.UIColor? {
-      return UIKit.UIColor(named: R.color.pink.name)
-    }
-    #endif
-
-    #if os(watchOS)
-    /// `UIColor(named: "primary", bundle: ..., traitCollection: ...)`
-    @available(watchOSApplicationExtension 4.0, *)
-    static func primary(_: Void = ()) -> UIKit.UIColor? {
-      return UIKit.UIColor(named: R.color.primary.name)
-    }
-    #endif
-
-    #if os(watchOS)
-    /// `UIColor(named: "secondary", bundle: ..., traitCollection: ...)`
-    @available(watchOSApplicationExtension 4.0, *)
-    static func secondary(_: Void = ()) -> UIKit.UIColor? {
-      return UIKit.UIColor(named: R.color.secondary.name)
-    }
-    #endif
-
-    #if os(watchOS)
-    /// `UIColor(named: "text", bundle: ..., traitCollection: ...)`
-    @available(watchOSApplicationExtension 4.0, *)
-    static func text(_: Void = ()) -> UIKit.UIColor? {
-      return UIKit.UIColor(named: R.color.text.name)
-    }
-    #endif
-
-    #if os(watchOS)
-    /// `UIColor(named: "yellow", bundle: ..., traitCollection: ...)`
-    @available(watchOSApplicationExtension 4.0, *)
-    static func yellow(_: Void = ()) -> UIKit.UIColor? {
-      return UIKit.UIColor(named: R.color.yellow.name)
     }
     #endif
 
@@ -4593,12 +4593,32 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.nib` struct is generated, and contains static references to 2 nibs.
+  /// This `R.nib` struct is generated, and contains static references to 4 nibs.
   struct nib {
+    /// Nib `MetabolicTypeTableViewCell`.
+    static let metabolicTypeTableViewCell = _R.nib._MetabolicTypeTableViewCell()
+    /// Nib `MetabolicTypeView`.
+    static let metabolicTypeView = _R.nib._MetabolicTypeView()
     /// Nib `ResultBarView`.
     static let resultBarView = _R.nib._ResultBarView()
     /// Nib `ResultTableViewCell`.
     static let resultTableViewCell = _R.nib._ResultTableViewCell()
+
+    #if os(iOS) || os(tvOS)
+    /// `UINib(name: "MetabolicTypeTableViewCell", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.metabolicTypeTableViewCell) instead")
+    static func metabolicTypeTableViewCell(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.metabolicTypeTableViewCell)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UINib(name: "MetabolicTypeView", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.metabolicTypeView) instead")
+    static func metabolicTypeView(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.metabolicTypeView)
+    }
+    #endif
 
     #if os(iOS) || os(tvOS)
     /// `UINib(name: "ResultBarView", in: bundle)`
@@ -4615,6 +4635,14 @@ struct R: Rswift.Validatable {
       return UIKit.UINib(resource: R.nib.resultTableViewCell)
     }
     #endif
+
+    static func metabolicTypeTableViewCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> MetabolicTypeTableViewCell? {
+      return R.nib.metabolicTypeTableViewCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? MetabolicTypeTableViewCell
+    }
+
+    static func metabolicTypeView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
+      return R.nib.metabolicTypeView.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
+    }
 
     static func resultBarView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
       return R.nib.resultBarView.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
@@ -4649,6 +4677,28 @@ struct _R: Rswift.Validatable {
 
   #if os(iOS) || os(tvOS)
   struct nib {
+    struct _MetabolicTypeTableViewCell: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "MetabolicTypeTableViewCell"
+
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> MetabolicTypeTableViewCell? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? MetabolicTypeTableViewCell
+      }
+
+      fileprivate init() {}
+    }
+
+    struct _MetabolicTypeView: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "MetabolicTypeView"
+
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
+      }
+
+      fileprivate init() {}
+    }
+
     struct _ResultBarView: Rswift.NibResourceType {
       let bundle = R.hostingBundle
       let name = "ResultBarView"
