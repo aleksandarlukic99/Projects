@@ -1,16 +1,15 @@
 //
-//  MetabolicTypeTableViewCell.swift
+//  ListTableViewCell.swift
 //  UNCODE
 //
-//  Created by aleksandar on 10.3.22..
+//  Created by aleksandar on 11.3.22..
 //
 
 import UIKit
 
-class MetabolicTypeTableViewCell: UITableViewCell {
+class ListTableViewCell: UITableViewCell {
 
-    @IBOutlet private weak var stackView: UIStackView!
-    @IBOutlet private weak var dailyRecommendation: UILabel!
+    @IBOutlet private weak var titleLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -29,8 +28,8 @@ class MetabolicTypeTableViewCell: UITableViewCell {
         contentView.layer.masksToBounds = true
     }
     
-    func configure(with item: MetabolicTypeCellItem) {
-        self.dailyRecommendation.text = "Daily calorie requirements: \(item.dailyRecommendation) kcal"
+    func configure(with item: ListCellItem) {
+        self.titleLabel.text = item.title
     }
     
 }

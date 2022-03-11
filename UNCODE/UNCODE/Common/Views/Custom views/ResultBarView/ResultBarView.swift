@@ -32,6 +32,7 @@ class ResultBarView: UIView {
         stackView
             .spacing(stackView.frame.width / 99)
     }
+    
 }
 
 //MARK: - View setup
@@ -60,4 +61,5 @@ private extension ResultBarView {
             stackView.addArrangedSubview(bar)
         }
     }
+    
 }

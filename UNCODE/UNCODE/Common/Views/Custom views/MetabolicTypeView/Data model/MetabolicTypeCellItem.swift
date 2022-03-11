@@ -15,7 +15,7 @@ struct MetabolicTypeCellItem {
         let detail: String
     }
 
-    let dailyRecommendation: String
+    let dailyRecommendation: Int
     let proteinItem: PercentageViewItem
     let carbItem: PercentageViewItem
     let fatItem: PercentageViewItem

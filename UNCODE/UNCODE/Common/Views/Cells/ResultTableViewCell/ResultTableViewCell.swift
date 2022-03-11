@@ -31,7 +31,9 @@ class ResultTableViewCell: UITableViewCell {
     }
     
     func configure(item: ResultViewItem) {
-        
+        self.subtitleLabel.text = item.subtitle
+        self.titleLabel.text = item.title
+        self.infoLabel.text = item.info
     }
 
 }

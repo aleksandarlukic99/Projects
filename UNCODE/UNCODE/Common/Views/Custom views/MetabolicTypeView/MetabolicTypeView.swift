@@ -39,6 +39,11 @@ class MetabolicTypeView: UIView {
         percentView.addSubview(detailPercent)
         percentViewTrailingConstraint.constant = 100
     }
+    
+    func configureView(with item: MetabolicTypeCellItem.PercentageViewItem) {
+        self.titleLabel.text = item.title
+        self.detailPercent.text = item.detail
+    }
 
 }
 //MARK: - View Setup

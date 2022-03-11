@@ -156,6 +156,10 @@
 		2C7DD76A27DA681300863CD8 /* MetabolicTypeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C7DD76927DA681300863CD8 /* MetabolicTypeView.xib */; };
 		2CD8502627D8F7F70093F37E /* ResultBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD8502527D8F7F70093F37E /* ResultBarView.swift */; };
 		2CD8502A27D8FBCE0093F37E /* ResultBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CD8502927D8FBCE0093F37E /* ResultBarView.xib */; };
+		2CE25E0D27DB7B9500C0778D /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE25E0B27DB7B9500C0778D /* ListTableViewCell.swift */; };
+		2CE25E0E27DB7B9500C0778D /* ListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CE25E0C27DB7B9500C0778D /* ListTableViewCell.xib */; };
+		2CE25E1127DB826B00C0778D /* ListCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE25E1027DB826B00C0778D /* ListCellView.swift */; };
+		2CE25E1527DB843000C0778D /* ListCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CE25E1427DB843000C0778D /* ListCellView.xib */; };
 		6CADD04D27D9631E003DE5C2 /* UIStackView+AttributeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CADD04327D9631E003DE5C2 /* UIStackView+AttributeBuilder.swift */; };
 		6CADD04E27D9631E003DE5C2 /* UIImageView+AttributeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CADD04427D9631E003DE5C2 /* UIImageView+AttributeBuilder.swift */; };
 		6CADD04F27D9631E003DE5C2 /* UITextView+AttributeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CADD04527D9631E003DE5C2 /* UITextView+AttributeBuilder.swift */; };
@@ -323,6 +327,10 @@
 		2C7DD76927DA681300863CD8 /* MetabolicTypeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MetabolicTypeView.xib; sourceTree = "<group>"; };
 		2CD8502527D8F7F70093F37E /* ResultBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultBarView.swift; sourceTree = "<group>"; };
 		2CD8502927D8FBCE0093F37E /* ResultBarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultBarView.xib; sourceTree = "<group>"; };
+		2CE25E0B27DB7B9500C0778D /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
+		2CE25E0C27DB7B9500C0778D /* ListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListTableViewCell.xib; sourceTree = "<group>"; };
+		2CE25E1027DB826B00C0778D /* ListCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCellView.swift; sourceTree = "<group>"; };
+		2CE25E1427DB843000C0778D /* ListCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListCellView.xib; sourceTree = "<group>"; };
 		6CADD04327D9631E003DE5C2 /* UIStackView+AttributeBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStackView+AttributeBuilder.swift"; sourceTree = "<group>"; };
 		6CADD04427D9631E003DE5C2 /* UIImageView+AttributeBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+AttributeBuilder.swift"; sourceTree = "<group>"; };
 		6CADD04527D9631E003DE5C2 /* UITextView+AttributeBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextView+AttributeBuilder.swift"; sourceTree = "<group>"; };
@@ -569,6 +577,7 @@
 		2C7DD75E27DA452E00863CD8 /* Custom views */ = {
 			isa = PBXGroup;
 			children = (
+				2CE25E0F27DB823E00C0778D /* ListCellView */,
 				2C7DD76627DA67B400863CD8 /* MetabolicTypeView */,
 				2C7DD75F27DA457000863CD8 /* ResultBarView */,
 			);
@@ -618,6 +627,24 @@
 				2C7DD75827DA437A00863CD8 /* MetabolicTypeCellItem.swift */,
 			);
 			path = "Data model";
+			sourceTree = "<group>";
+		};
+		2CE25E0A27DB7B6900C0778D /* ListCell */ = {
+			isa = PBXGroup;
+			children = (
+				2CE25E0B27DB7B9500C0778D /* ListTableViewCell.swift */,
+				2CE25E0C27DB7B9500C0778D /* ListTableViewCell.xib */,
+			);
+			path = ListCell;
+			sourceTree = "<group>";
+		};
+		2CE25E0F27DB823E00C0778D /* ListCellView */ = {
+			isa = PBXGroup;
+			children = (
+				2CE25E1027DB826B00C0778D /* ListCellView.swift */,
+				2CE25E1427DB843000C0778D /* ListCellView.xib */,
+			);
+			path = ListCellView;
 			sourceTree = "<group>";
 		};
 		6A64F9961D69FA2EE0DB6767 /* Pods */ = {
@@ -685,6 +712,7 @@
 		6CDB2C6527D96D140052C6B3 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				2CE25E0A27DB7B6900C0778D /* ListCell */,
 				2C7DD76127DA50F900863CD8 /* MetabolicTypeCell */,
 				6CDB2C6627D96D1A0052C6B3 /* ResultTableViewCell */,
 			);
@@ -845,6 +873,7 @@
 				2C5A562727D6B3BA00C5F0A5 /* Inter-Thin.ttf in Resources */,
 				2C5A55DB27D6B35600C5F0A5 /* SF-Compact-Text-Light.otf in Resources */,
 				2C5A55EE27D6B35600C5F0A5 /* SF-Compact-Display-Heavy.otf in Resources */,
+				2CE25E0E27DB7B9500C0778D /* ListTableViewCell.xib in Resources */,
 				2C5A560D27D6B3A100C5F0A5 /* Rubik-SemiBoldItalic.ttf in Resources */,
 				2C5A55B927D6B35600C5F0A5 /* SF-Pro-Display-Regular.otf in Resources */,
 				2C5A55C627D6B35600C5F0A5 /* SF-Pro-Rounded-Heavy.otf in Resources */,
@@ -911,6 +940,7 @@
 				2C5A561127D6B3A100C5F0A5 /* Rubik-Black.ttf in Resources */,
 				2C5A55D327D6B35600C5F0A5 /* SF-Pro-Display-SemiboldItalic.otf in Resources */,
 				2C5A562527D6B3BA00C5F0A5 /* Inter-Light.ttf in Resources */,
+				2CE25E1527DB843000C0778D /* ListCellView.xib in Resources */,
 				2C5A554C27D6B32100C5F0A5 /* Montserrat-SemiBoldItalic.ttf in Resources */,
 				2C5A55C727D6B35600C5F0A5 /* SF-Pro-Text-RegularItalic.otf in Resources */,
 				2C5A554D27D6B32100C5F0A5 /* Montserrat-Black.ttf in Resources */,
@@ -971,6 +1001,7 @@
 			files = (
 				6CADD04F27D9631E003DE5C2 /* UITextView+AttributeBuilder.swift in Sources */,
 				6CADD05527D9631E003DE5C2 /* UILabel+AttributeBuilder.swift in Sources */,
+				2CE25E0D27DB7B9500C0778D /* ListTableViewCell.swift in Sources */,
 				2C0F722B27D64FBF007253DC /* ViewController.swift in Sources */,
 				2C7DD76427DA518D00863CD8 /* MetabolicTypeTableViewCell.swift in Sources */,
 				2CD8502627D8F7F70093F37E /* ResultBarView.swift in Sources */,
@@ -988,6 +1019,7 @@
 				2C0C348E27D7FB35004097EC /* ResultTableViewCell.swift in Sources */,
 				6CADD05027D9631E003DE5C2 /* UITextField+AttributeBuilder.swift in Sources */,
 				6CADD05227D9631E003DE5C2 /* UIButton+AttributeBuilder.swift in Sources */,
+				2CE25E1127DB826B00C0778D /* ListCellView.swift in Sources */,
 				2C7DD75927DA437A00863CD8 /* MetabolicTypeCellItem.swift in Sources */,
 				2C0F722927D64FBF007253DC /* SceneDelegate.swift in Sources */,
 				2C7DD76827DA67F800863CD8 /* MetabolicTypeView.swift in Sources */,

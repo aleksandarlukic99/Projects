@@ -4593,8 +4593,10 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.nib` struct is generated, and contains static references to 4 nibs.
+  /// This `R.nib` struct is generated, and contains static references to 5 nibs.
   struct nib {
+    /// Nib `ListTableViewCell`.
+    static let listTableViewCell = _R.nib._ListTableViewCell()
     /// Nib `MetabolicTypeTableViewCell`.
     static let metabolicTypeTableViewCell = _R.nib._MetabolicTypeTableViewCell()
     /// Nib `MetabolicTypeView`.
@@ -4603,6 +4605,14 @@ struct R: Rswift.Validatable {
     static let resultBarView = _R.nib._ResultBarView()
     /// Nib `ResultTableViewCell`.
     static let resultTableViewCell = _R.nib._ResultTableViewCell()
+
+    #if os(iOS) || os(tvOS)
+    /// `UINib(name: "ListTableViewCell", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.listTableViewCell) instead")
+    static func listTableViewCell(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.listTableViewCell)
+    }
+    #endif
 
     #if os(iOS) || os(tvOS)
     /// `UINib(name: "MetabolicTypeTableViewCell", in: bundle)`
@@ -4635,6 +4645,10 @@ struct R: Rswift.Validatable {
       return UIKit.UINib(resource: R.nib.resultTableViewCell)
     }
     #endif
+
+    static func listTableViewCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> ListTableViewCell? {
+      return R.nib.listTableViewCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? ListTableViewCell
+    }
 
     static func metabolicTypeTableViewCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> MetabolicTypeTableViewCell? {
       return R.nib.metabolicTypeTableViewCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? MetabolicTypeTableViewCell
@@ -4677,6 +4691,17 @@ struct _R: Rswift.Validatable {
 
   #if os(iOS) || os(tvOS)
   struct nib {
+    struct _ListTableViewCell: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "ListTableViewCell"
+
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> ListTableViewCell? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? ListTableViewCell
+      }
+
+      fileprivate init() {}
+    }
+
     struct _MetabolicTypeTableViewCell: Rswift.NibResourceType {
       let bundle = R.hostingBundle
       let name = "MetabolicTypeTableViewCell"
