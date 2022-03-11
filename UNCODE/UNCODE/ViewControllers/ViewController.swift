@@ -17,7 +17,7 @@ class ViewController: UIViewController {
             .delegate(self)
             .dataSource(self)
             .rowHeight(UITableView.automaticDimension)
-            .register(cellTypes: [ResultTableViewCell.self, MetabolicTypeTableViewCell.self])
+            .register(cellTypes: [ResultTableViewCell.self, MetabolicTypeTableViewCell.self, ListTableViewCell.self])
     }
 
 }
@@ -32,8 +32,9 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(for: indexPath, cellType: ResultTableViewCell.self)
         let cell2 = tableView.dequeueReusableCell(for: indexPath, cellType: MetabolicTypeTableViewCell.self)
+        let cell3 = tableView.dequeueReusableCell(for: indexPath, cellType: ListTableViewCell.self)
         
-        return cell2
+        return cell3
     }
     
 }

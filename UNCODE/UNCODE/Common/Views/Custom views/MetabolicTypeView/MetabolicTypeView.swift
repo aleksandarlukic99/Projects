@@ -37,7 +37,7 @@ class MetabolicTypeView: UIView {
         backgroundView.addSubview(percentView)
         percentView.addSubview(titleLabel)
         percentView.addSubview(detailPercent)
-        percentViewTrailingConstraint.constant = 100
+        percentViewTrailingConstraint.constant = 50
     }
     
     func configureView(with item: MetabolicTypeCellItem.PercentageViewItem) {

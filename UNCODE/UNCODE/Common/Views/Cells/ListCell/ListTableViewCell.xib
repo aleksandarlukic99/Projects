@@ -12,11 +12,7 @@
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner">
-            <connections>
-                <outlet property="titleLabel" destination="ASz-Tx-PvC" id="9Hd-iR-cnm"/>
-            </connections>
-        </placeholder>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="131" id="KGk-i7-Jjw" customClass="ListTableViewCell" customModule="UNCODE" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="131"/>
@@ -31,9 +27,9 @@
                         <color key="textColor" red="1" green="1" blue="1" alpha="0.51000000000000001" colorSpace="custom" customColorSpace="displayP3"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="71w-bt-uY9">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="71w-bt-uY9" customClass="ListCellView" customModule="UNCODE" customModuleProvider="target">
                         <rect key="frame" x="20" y="67" width="280" height="44"/>
-                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="44" id="eeG-co-kQh"/>
                         </constraints>
@@ -49,6 +45,9 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="titleLabel" destination="ASz-Tx-PvC" id="Xlm-2N-Ehc"/>
+            </connections>
             <point key="canvasLocation" x="131.8840579710145" y="91.40625"/>
         </tableViewCell>
     </objects>

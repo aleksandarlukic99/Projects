@@ -9,6 +9,7 @@ import UIKit
 
 class ListCellView: UIView {
 
+    @IBOutlet var listView: UIView!
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var detailLabel: UILabel!
     
@@ -26,8 +27,16 @@ class ListCellView: UIView {
     //MARK: - Lifecycle
     override func layoutSubviews() {
         super.layoutSubviews()
-        self.layer.cornerRadius = 8
-        self.layer.masksToBounds = true
+        listView.frame = self.bounds
+        listView.layer.cornerRadius = 8
+        listView.layer.masksToBounds = true
+        listView.backgroundColor = UIColor(red: 255, green: 255, blue: 255, alpha: 0.1)
+        let blurEffect = UIBlurEffect(style: .prominent)
+        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+        blurEffectView.frame = listView.bounds
+        listView.addSubview(blurEffectView)
+        listView.addSubview(titleLabel)
+        listView.addSubview(detailLabel)
     }
     
     func configureView(with item: ListCellItem.Item) {
@@ -41,6 +50,8 @@ private extension ListCellView {
     
     func commonInit() {
         Bundle.main.loadNibNamed("ListCellView", owner: self, options: nil)
+        addSubview(listView)
+        listView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
     }
     
 }
