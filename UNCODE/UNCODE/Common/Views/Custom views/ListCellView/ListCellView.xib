@@ -27,14 +27,14 @@
             <rect key="frame" x="0.0" y="0.0" width="335" height="44"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kO4-Qo-ezT">
-                    <rect key="frame" x="10" y="12.5" width="28.5" height="19.5"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kO4-Qo-ezT">
+                    <rect key="frame" x="10" y="12.5" width="28.5" height="19"/>
                     <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="16"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VbC-10-UWx">
-                    <rect key="frame" x="275" y="12.5" width="40" height="19.5"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VbC-10-UWx">
+                    <rect key="frame" x="275" y="12.5" width="40" height="19"/>
                     <fontDescription key="fontDescription" name="SFCompactDisplay-Regular" family="SF Compact Display" pointSize="16"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -43,10 +43,13 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="VbC-10-UWx" secondAttribute="bottom" constant="12.5" id="0eF-Sp-Zqe"/>
+                <constraint firstItem="VbC-10-UWx" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="12.5" id="Dfz-2H-wgj"/>
                 <constraint firstAttribute="trailing" secondItem="VbC-10-UWx" secondAttribute="trailing" constant="20" id="I2H-WE-hcL"/>
+                <constraint firstItem="kO4-Qo-ezT" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="12.5" id="Ljb-aF-lTc"/>
                 <constraint firstItem="kO4-Qo-ezT" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="bGO-1g-gKu"/>
                 <constraint firstItem="kO4-Qo-ezT" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="cX4-BJ-gMZ"/>
-                <constraint firstItem="VbC-10-UWx" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="xOJ-uI-H1e"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="kO4-Qo-ezT" secondAttribute="bottom" constant="12.5" id="lQj-U5-gta"/>
             </constraints>
             <nil key="simulatedTopBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

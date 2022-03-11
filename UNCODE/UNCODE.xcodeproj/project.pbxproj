@@ -605,6 +605,7 @@
 		2C7DD76127DA50F900863CD8 /* MetabolicTypeCell */ = {
 			isa = PBXGroup;
 			children = (
+				2C7DD75827DA437A00863CD8 /* MetabolicTypeCellItem.swift */,
 				2C7DD76227DA518D00863CD8 /* MetabolicTypeTableViewCell.swift */,
 				2C7DD76327DA518D00863CD8 /* MetabolicTypeTableViewCell.xib */,
 			);
@@ -614,19 +615,10 @@
 		2C7DD76627DA67B400863CD8 /* MetabolicTypeView */ = {
 			isa = PBXGroup;
 			children = (
-				2C7DD76B27DA681C00863CD8 /* Data model */,
 				2C7DD76727DA67F800863CD8 /* MetabolicTypeView.swift */,
 				2C7DD76927DA681300863CD8 /* MetabolicTypeView.xib */,
 			);
 			path = MetabolicTypeView;
-			sourceTree = "<group>";
-		};
-		2C7DD76B27DA681C00863CD8 /* Data model */ = {
-			isa = PBXGroup;
-			children = (
-				2C7DD75827DA437A00863CD8 /* MetabolicTypeCellItem.swift */,
-			);
-			path = "Data model";
 			sourceTree = "<group>";
 		};
 		2CE25E0A27DB7B6900C0778D /* ListCell */ = {

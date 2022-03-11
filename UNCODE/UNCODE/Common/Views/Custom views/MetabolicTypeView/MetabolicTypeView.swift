@@ -9,7 +9,7 @@ import UIKit
 
 class MetabolicTypeView: UIView {
     //MARK: - Properties
-    @IBOutlet private var backgroundView: UIView!
+    @IBOutlet private weak var backgroundView: UIView!
     @IBOutlet private weak var percentView: UIView!
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var detailPercent: UILabel!

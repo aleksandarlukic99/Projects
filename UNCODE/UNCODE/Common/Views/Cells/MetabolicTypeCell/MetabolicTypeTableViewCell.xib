@@ -25,13 +25,13 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="248" text="Metabolic type" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qTW-sn-Anf">
-                        <rect key="frame" x="20" y="20" width="99" height="20.5"/>
+                        <rect key="frame" x="20" y="20" width="335" height="20.5"/>
                         <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="16"/>
                         <color key="textColor" red="1" green="1" blue="1" alpha="0.51000000000000001" colorSpace="custom" customColorSpace="displayP3"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Protein Type" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d22-zC-I2f">
-                        <rect key="frame" x="20" y="45.5" width="154" height="33.5"/>
+                        <rect key="frame" x="20" y="45.5" width="335" height="33.5"/>
                         <fontDescription key="fontDescription" name="SFProDisplay-Semibold" family="SF Pro Display" pointSize="28"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -62,7 +62,7 @@
                             <constraint firstAttribute="height" constant="155.5" id="LeC-te-aqr"/>
                         </constraints>
                     </stackView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Daily calorie requirements: 1,500 kcal" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l5h-Z3-1hq">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Daily calorie requirements: 1,500 kcal" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l5h-Z3-1hq">
                         <rect key="frame" x="20" y="329.5" width="335" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
@@ -73,7 +73,9 @@
                 <constraints>
                     <constraint firstItem="qTW-sn-Anf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="1L1-MZ-HRA"/>
                     <constraint firstItem="l5h-Z3-1hq" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="2vt-EV-XQK"/>
+                    <constraint firstAttribute="trailing" secondItem="qTW-sn-Anf" secondAttribute="trailing" constant="20" id="Ca3-Ho-88j"/>
                     <constraint firstItem="l5h-Z3-1hq" firstAttribute="top" secondItem="IHo-Sw-vKE" secondAttribute="bottom" constant="20" id="Ijc-SQ-YrN"/>
+                    <constraint firstAttribute="trailing" secondItem="d22-zC-I2f" secondAttribute="trailing" constant="20" id="Ud0-1p-szf"/>
                     <constraint firstItem="4O2-cY-Gol" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="WDC-Cw-cNu"/>
                     <constraint firstItem="4O2-cY-Gol" firstAttribute="top" secondItem="d22-zC-I2f" secondAttribute="bottom" constant="20" id="Xn6-eJ-C7Z"/>
                     <constraint firstAttribute="trailing" secondItem="4O2-cY-Gol" secondAttribute="trailing" constant="20" id="Z3D-2v-f2D"/>

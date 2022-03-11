@@ -10,11 +10,17 @@ import UIKit
 class ListTableViewCell: UITableViewCell {
 
     @IBOutlet private weak var titleLabel: UILabel!
-    
+    @IBOutlet private weak var stackView: UIStackView!
+
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.selectionStyle = .none
-        self.isUserInteractionEnabled(false)
+        selectionStyle = .none
+        isUserInteractionEnabled(false)
+
+        stackView
+            .axis(.vertical)
+            .spacing(10)
+            .distribution(.fillEqually)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -29,7 +35,15 @@ class ListTableViewCell: UITableViewCell {
     }
     
     func configure(with item: ListCellItem) {
-        self.titleLabel.text = item.title
+        self.titleLabel
+            .text(item.title)
+        stackView
+            .removeArrangedSubviews()
+        for listItem in item.items {
+            let view = ListCellView(frame: .zero)
+            view.configureView(with: listItem)
+            stackView
+                .addArrangedSubviews(view)
+        }
     }
-    
 }

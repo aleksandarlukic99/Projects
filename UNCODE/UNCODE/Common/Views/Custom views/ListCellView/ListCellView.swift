@@ -27,7 +27,7 @@ class ListCellView: UIView {
     //MARK: - Lifecycle
     override func layoutSubviews() {
         super.layoutSubviews()
-        listView.frame = self.bounds
+        listView.frame = bounds
         listView.layer.cornerRadius = 8
         listView.layer.masksToBounds = true
         listView.backgroundColor = UIColor(red: 255, green: 255, blue: 255, alpha: 0.1)
@@ -40,8 +40,10 @@ class ListCellView: UIView {
     }
     
     func configureView(with item: ListCellItem.Item) {
-        self.titleLabel.text = item.title
-        self.detailLabel.text = item.detail
+        titleLabel.text = item.title
+        detailLabel.text = item.detail
+        detailLabel.textColor = item.detailColor
+
     }
 
 }
@@ -52,6 +54,10 @@ private extension ListCellView {
         Bundle.main.loadNibNamed("ListCellView", owner: self, options: nil)
         addSubview(listView)
         listView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+        translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            heightAnchor.constraint(equalToConstant: 44)
+        ])
     }
     
 }
