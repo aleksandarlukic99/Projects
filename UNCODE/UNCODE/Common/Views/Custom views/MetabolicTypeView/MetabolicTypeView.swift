@@ -28,11 +28,6 @@ class MetabolicTypeView: UIView {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        backgroundView.layer
-            .cornerRadius(8)
-            .masksToBounds(true)
-        backgroundView
-            .backgroundColor(UIColor(red: 255, green: 255, blue: 255, alpha: 0.1))
         let blurEffect = UIBlurEffect(style: .prominent)
         let blurEffectView = UIVisualEffectView(effect: blurEffect)
         blurEffectView.frame = backgroundView.bounds
@@ -60,6 +55,11 @@ private extension MetabolicTypeView {
         addSubview(backgroundView)
         backgroundView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         percentViewTrailingConstraint.constant = 50
+        backgroundView.layer
+            .cornerRadius(8)
+            .masksToBounds(true)
+        backgroundView
+            .backgroundColor(UIColor(red: 255, green: 255, blue: 255, alpha: 0.1))
     }
     
 }

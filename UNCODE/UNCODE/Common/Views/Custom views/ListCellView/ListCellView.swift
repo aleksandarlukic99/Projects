@@ -27,12 +27,6 @@ class ListCellView: UIView {
     //MARK: - Lifecycle
     override func layoutSubviews() {
         super.layoutSubviews()
-        listView.frame = bounds
-        listView.layer
-            .cornerRadius(8)
-            .masksToBounds(true)
-        listView
-            .backgroundColor(UIColor(red: 255, green: 255, blue: 255, alpha: 0.1))
         let blurEffect = UIBlurEffect(style: .prominent)
         let blurEffectView = UIVisualEffectView(effect: blurEffect)
         blurEffectView.frame = listView.bounds
@@ -62,6 +56,12 @@ private extension ListCellView {
         NSLayoutConstraint.activate([
             heightAnchor.constraint(equalToConstant: 44)
         ])
+        listView.frame = bounds
+        listView.layer
+            .cornerRadius(8)
+            .masksToBounds(true)
+        listView
+            .backgroundColor(UIColor(red: 255, green: 255, blue: 255, alpha: 0.1))
     }
     
 }

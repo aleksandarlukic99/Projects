@@ -19,6 +19,7 @@ class MetabolicTypeTableViewCell: UITableViewCell {
         super.awakeFromNib()
         selectionStyle = .none
         isUserInteractionEnabled(false)
+        commonInit()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -28,9 +29,6 @@ class MetabolicTypeTableViewCell: UITableViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
         contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20))
-        contentView.layer
-            .cornerRadius(10)
-            .masksToBounds(true)
     }
     
     func configure(with item: MetabolicTypeCellItem) {
@@ -44,6 +42,16 @@ class MetabolicTypeTableViewCell: UITableViewCell {
         
         let fatItem = item.fatItem
         fatView.configureView(with: fatItem)
+    }
+    
+}
+
+private extension MetabolicTypeTableViewCell {
+    
+    func commonInit() {
+        contentView.layer
+            .cornerRadius(10)
+            .masksToBounds(true)
     }
     
 }

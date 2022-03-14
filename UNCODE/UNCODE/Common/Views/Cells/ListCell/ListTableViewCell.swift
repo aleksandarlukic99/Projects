@@ -21,6 +21,8 @@ class ListTableViewCell: UITableViewCell {
             .axis(.vertical)
             .spacing(10)
             .distribution(.fillEqually)
+        
+        commonInit()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -30,9 +32,6 @@ class ListTableViewCell: UITableViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
         contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20))
-        contentView.layer
-            .cornerRadius(10)
-            .masksToBounds(true)
     }
     
     func configure(with item: ListCellItem) {
@@ -47,4 +46,15 @@ class ListTableViewCell: UITableViewCell {
                 .addArrangedSubviews(view)
         }
     }
+    
+}
+
+private extension ListTableViewCell {
+    
+    func commonInit() {
+        contentView.layer
+            .cornerRadius(10)
+            .masksToBounds(true)
+    }
+    
 }
