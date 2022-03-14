@@ -36,12 +36,12 @@ class ListCellView: UIView {
         let blurEffect = UIBlurEffect(style: .prominent)
         let blurEffectView = UIVisualEffectView(effect: blurEffect)
         blurEffectView.frame = listView.bounds
-        listView
-            .addSubview(blurEffectView)
-        listView
-            .addSubview(titleLabel)
-        listView
-            .addSubview(detailLabel)
+        blurEffectView
+            .addAsSubviewOf(listView)
+        titleLabel
+            .addAsSubviewOf(listView)
+        detailLabel
+            .addAsSubviewOf(listView)
     }
     
     func configureView(with item: ListCellItem.Item) {

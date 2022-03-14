@@ -36,15 +36,14 @@ class MetabolicTypeView: UIView {
         let blurEffect = UIBlurEffect(style: .prominent)
         let blurEffectView = UIVisualEffectView(effect: blurEffect)
         blurEffectView.frame = backgroundView.bounds
-        backgroundView
-            .addSubview(blurEffectView)
-        backgroundView
-            .addSubview(percentView)
+        blurEffectView
+            .addAsSubviewOf(backgroundView)
         percentView
-            .addSubview(titleLabel)
-        percentView
-            .addSubview(detailPercent)
-        percentViewTrailingConstraint.constant = 50
+            .addAsSubviewOf(backgroundView)
+        titleLabel
+            .addAsSubviewOf(percentView)
+        detailPercent
+            .addAsSubviewOf(percentView)
     }
     
     func configureView(with item: MetabolicTypeCellItem.PercentageViewItem) {
@@ -60,6 +59,7 @@ private extension MetabolicTypeView {
         Bundle.main.loadNibNamed("MetabolicTypeView", owner: self, options: nil)
         addSubview(backgroundView)
         backgroundView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+        percentViewTrailingConstraint.constant = 50
     }
     
 }
