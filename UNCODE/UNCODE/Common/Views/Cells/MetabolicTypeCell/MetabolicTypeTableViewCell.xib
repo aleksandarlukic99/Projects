@@ -91,7 +91,10 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="carbView" destination="tjz-lo-AdQ" id="hjf-g6-Ef6"/>
                 <outlet property="dailyRecommendation" destination="l5h-Z3-1hq" id="Ax2-Hk-D28"/>
+                <outlet property="fatView" destination="viT-R7-snZ" id="OUo-th-NsD"/>
+                <outlet property="proteinView" destination="Ne3-fD-b9y" id="C1A-5W-qbC"/>
                 <outlet property="stackView" destination="IHo-Sw-vKE" id="buT-MD-nfO"/>
             </connections>
             <point key="canvasLocation" x="158.69565217391306" y="57.589285714285708"/>

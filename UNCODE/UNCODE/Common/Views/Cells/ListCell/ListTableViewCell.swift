@@ -30,12 +30,13 @@ class ListTableViewCell: UITableViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
         contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20))
-        contentView.layer.cornerRadius = 10
-        contentView.layer.masksToBounds = true
+        contentView.layer
+            .cornerRadius(10)
+            .masksToBounds(true)
     }
     
     func configure(with item: ListCellItem) {
-        self.titleLabel
+        titleLabel
             .text(item.title)
         stackView
             .removeArrangedSubviews()

@@ -9,7 +9,7 @@ import UIKit
 
 class ListCellView: UIView {
 
-    @IBOutlet var listView: UIView!
+    @IBOutlet private weak var listView: UIView!
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var detailLabel: UILabel!
     
@@ -28,22 +28,26 @@ class ListCellView: UIView {
     override func layoutSubviews() {
         super.layoutSubviews()
         listView.frame = bounds
-        listView.layer.cornerRadius = 8
-        listView.layer.masksToBounds = true
-        listView.backgroundColor = UIColor(red: 255, green: 255, blue: 255, alpha: 0.1)
+        listView.layer
+            .cornerRadius(8)
+            .masksToBounds(true)
+        listView
+            .backgroundColor(UIColor(red: 255, green: 255, blue: 255, alpha: 0.1))
         let blurEffect = UIBlurEffect(style: .prominent)
         let blurEffectView = UIVisualEffectView(effect: blurEffect)
         blurEffectView.frame = listView.bounds
-        listView.addSubview(blurEffectView)
-        listView.addSubview(titleLabel)
-        listView.addSubview(detailLabel)
+        listView
+            .addSubview(blurEffectView)
+        listView
+            .addSubview(titleLabel)
+        listView
+            .addSubview(detailLabel)
     }
     
     func configureView(with item: ListCellItem.Item) {
-        titleLabel.text = item.title
-        detailLabel.text = item.detail
-        detailLabel.textColor = item.detailColor
-
+        titleLabel.text(item.title)
+        detailLabel.text(item.detail)
+        detailLabel.textColor(item.detailColor)
     }
 
 }

@@ -27,22 +27,29 @@ class MetabolicTypeView: UIView {
     }
     
     override func layoutSubviews() {
-        backgroundView.layer.cornerRadius = 8
-        backgroundView.layer.masksToBounds = true
-        backgroundView.backgroundColor = UIColor(red: 255, green: 255, blue: 255, alpha: 0.1)
+        super.layoutSubviews()
+        backgroundView.layer
+            .cornerRadius(8)
+            .masksToBounds(true)
+        backgroundView
+            .backgroundColor(UIColor(red: 255, green: 255, blue: 255, alpha: 0.1))
         let blurEffect = UIBlurEffect(style: .prominent)
         let blurEffectView = UIVisualEffectView(effect: blurEffect)
         blurEffectView.frame = backgroundView.bounds
-        backgroundView.addSubview(blurEffectView)
-        backgroundView.addSubview(percentView)
-        percentView.addSubview(titleLabel)
-        percentView.addSubview(detailPercent)
+        backgroundView
+            .addSubview(blurEffectView)
+        backgroundView
+            .addSubview(percentView)
+        percentView
+            .addSubview(titleLabel)
+        percentView
+            .addSubview(detailPercent)
         percentViewTrailingConstraint.constant = 50
     }
     
     func configureView(with item: MetabolicTypeCellItem.PercentageViewItem) {
-        self.titleLabel.text = item.title
-        self.detailPercent.text = item.detail
+        titleLabel.text = item.title
+        detailPercent.text = item.detail
     }
 
 }

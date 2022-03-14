@@ -390,7 +390,6 @@
 				2C0F722F27D64FC1007253DC /* Assets.xcassets */,
 				2C0F723127D64FC1007253DC /* LaunchScreen.storyboard */,
 				2C0F723427D64FC1007253DC /* Info.plist */,
-				2C7DD75C27DA43E100863CD8 /* ListCellItem.swift */,
 			);
 			path = UNCODE;
 			sourceTree = "<group>";
@@ -587,19 +586,10 @@
 		2C7DD75F27DA457000863CD8 /* ResultBarView */ = {
 			isa = PBXGroup;
 			children = (
-				2C7DD76027DA45AD00863CD8 /* Data model */,
 				2CD8502927D8FBCE0093F37E /* ResultBarView.xib */,
 				2CD8502527D8F7F70093F37E /* ResultBarView.swift */,
 			);
 			path = ResultBarView;
-			sourceTree = "<group>";
-		};
-		2C7DD76027DA45AD00863CD8 /* Data model */ = {
-			isa = PBXGroup;
-			children = (
-				2C0C349327D7FC86004097EC /* ResultViewItem.swift */,
-			);
-			path = "Data model";
 			sourceTree = "<group>";
 		};
 		2C7DD76127DA50F900863CD8 /* MetabolicTypeCell */ = {
@@ -624,6 +614,7 @@
 		2CE25E0A27DB7B6900C0778D /* ListCell */ = {
 			isa = PBXGroup;
 			children = (
+				2C7DD75C27DA43E100863CD8 /* ListCellItem.swift */,
 				2CE25E0B27DB7B9500C0778D /* ListTableViewCell.swift */,
 				2CE25E0C27DB7B9500C0778D /* ListTableViewCell.xib */,
 			);
@@ -714,6 +705,7 @@
 		6CDB2C6627D96D1A0052C6B3 /* ResultTableViewCell */ = {
 			isa = PBXGroup;
 			children = (
+				2C0C349327D7FC86004097EC /* ResultViewItem.swift */,
 				2C0C348D27D7FB35004097EC /* ResultTableViewCell.swift */,
 				6CDB2C6327D96D010052C6B3 /* ResultTableViewCell.xib */,
 			);

@@ -21,32 +21,19 @@ class ViewController: UIViewController {
         CellTypes.resultCell,
         CellTypes.metabolicCell(
             .init(
-                dailyRecommendation: 20,
-                proteinItem: .init(
-                    percentage: 30,
-                    title: "Protiein",
-                    detail: "AAA"
-                ),
-                carbItem: .init(
-                    percentage: 20,
-                    title: "Carb",
-                    detail: "BBB"
-                ),
-                fatItem: .init(
-                    percentage: 40,
-                    title: "Fat",
-                    detail: "CCC"
-                )
+                dailyRecommendation: 1429,
+                proteinItem: .init(percentage: 30, title: "Protiein", detail: "30%"),
+                carbItem: .init( percentage: 20, title: "Carbohydrates", detail: "20%"),
+                fatItem: .init(percentage: 40, title: "Fat", detail: "40%")
             )
         ),
         CellTypes.listCell(
             .init(
-                title: "TEST",
+                title: "Sensitivities",
                 items: [
-                    .init(title: "AAAA", detail: "BBBB", detailColor: .green),
-                    .init(title: "AAAA", detail: "BBBB", detailColor: .green),
-                    .init(title: "AAAA", detail: "BBBB", detailColor: .green),
-                    .init(title: "AAAA", detail: "BBBB", detailColor: .green)
+                    .init(title: "Cafein", detail: "Normal", detailColor: .green),
+                    .init(title: "Gluten", detail: "Elevated", detailColor: .red),
+                    .init(title: "Salt", detail: "Slightly increased", detailColor: .yellow)
                 ]
             )
         )

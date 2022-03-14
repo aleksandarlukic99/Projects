@@ -24,16 +24,16 @@ class ResultTableViewCell: UITableViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-
         contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20))
-        contentView.layer.cornerRadius = 10
-        contentView.layer.masksToBounds = true
+        contentView.layer
+            .cornerRadius(10)
+            .masksToBounds(true)
     }
     
     func configure(item: ResultViewItem) {
-        self.subtitleLabel.text = item.subtitle
-        self.titleLabel.text = item.title
-        self.infoLabel.text = item.info
+        subtitleLabel.text(item.subtitle)
+        titleLabel.text(item.title)
+        infoLabel.text(item.info)
     }
 
 }
