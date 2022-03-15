@@ -53,8 +53,6 @@ private extension MetabolicTypeView {
         backgroundView.layer
             .cornerRadius(8)
             .masksToBounds(true)
-        //backgroundView
-        //    .backgroundColor(UIColor(red: 255, green: 255, blue: 255, alpha: 0.01))
         blurEffectView
             .addAsSubviewOf(backgroundView)
         percentView
