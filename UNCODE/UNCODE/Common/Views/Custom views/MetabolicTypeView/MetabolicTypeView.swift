@@ -14,6 +14,11 @@ class MetabolicTypeView: UIView {
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var detailPercent: UILabel!
     @IBOutlet private weak var percentViewTrailingConstraint: NSLayoutConstraint!
+
+    private let blurEffect = UIBlurEffect(style: .prominent)
+    private lazy var blurEffectView = { UIVisualEffectView(effect: blurEffect) }()
+
+    private var percentage: Int = 0
     
     //MARK: - Inits
     override init(frame: CGRect) {
@@ -28,30 +33,15 @@ class MetabolicTypeView: UIView {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        let blurEffect = UIBlurEffect(style: .prominent)
-        let blurEffectView = UIVisualEffectView(effect: blurEffect)
         blurEffectView.frame = backgroundView.bounds
-        blurEffectView
-            .addAsSubviewOf(backgroundView)
-        percentView
-            .addAsSubviewOf(backgroundView)
-        titleLabel
-            .addAsSubviewOf(percentView)
-        detailPercent
-            .addAsSubviewOf(percentView)
+        percentViewTrailingConstraint.constant = frame.width - (frame.width - ((frame.width * (100 - CGFloat(percentage))) / 100))
     }
     
     func configureView(with item: MetabolicTypeCellItem.PercentageViewItem) {
         titleLabel.text = item.title
         detailPercent.text = "\(item.percentage)%"
-        configurePercents(percents: item.percentage)
+        percentage = item.percentage
     }
-    
-    func configurePercents(percents: Int) {
-        let constraintWidth = (Int(percentView.frame.size.width) / 100) * (100 - percents)
-        percentViewTrailingConstraint.constant = CGFloat(constraintWidth)
-    }
-
 }
 //MARK: - View Setup
 private extension MetabolicTypeView {
@@ -65,6 +55,14 @@ private extension MetabolicTypeView {
             .masksToBounds(true)
         backgroundView
             .backgroundColor(UIColor(red: 255, green: 255, blue: 255, alpha: 0.1))
+        blurEffectView
+            .addAsSubviewOf(backgroundView)
+        percentView
+            .addAsSubviewOf(backgroundView)
+        titleLabel
+            .addAsSubviewOf(percentView)
+        detailPercent
+            .addAsSubviewOf(percentView)
     }
     
 }
