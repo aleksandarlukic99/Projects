@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro.ttf">
+            <string>SFPro-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ResultBarView" customModule="UNCODE" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="cpg-Nj-y1Z"/>
+                <outlet property="leftLabel" destination="WU5-xI-AHO" id="1GF-lA-olN"/>
+                <outlet property="midLabel" destination="Z73-R5-X6O" id="ecn-n6-n18"/>
+                <outlet property="rightLabel" destination="Msa-X6-Bve" id="nxI-zM-Ork"/>
+                <outlet property="stackView" destination="HOb-Gh-Xy9" id="YtW-dP-1bD"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="335" height="64"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="HOb-Gh-Xy9">
+                    <rect key="frame" x="0.0" y="0.0" width="335" height="41"/>
+                </stackView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="fast" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WU5-xI-AHO">
+                    <rect key="frame" x="0.0" y="49" width="23" height="15"/>
+                    <fontDescription key="fontDescription" name="SFPro-Medium" family="SF Pro" pointSize="12"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="0.51000000000000001" colorSpace="custom" customColorSpace="displayP3"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="normal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z73-R5-X6O">
+                    <rect key="frame" x="147" y="49" width="41" height="15"/>
+                    <fontDescription key="fontDescription" name="SFPro-Medium" family="SF Pro" pointSize="12"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="0.51000000000000001" colorSpace="custom" customColorSpace="displayP3"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="slow" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Msa-X6-Bve">
+                    <rect key="frame" x="308" y="49" width="27" height="15"/>
+                    <fontDescription key="fontDescription" name="SFPro-Medium" family="SF Pro" pointSize="12"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="0.51000000000000001" colorSpace="custom" customColorSpace="displayP3"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="Z73-R5-X6O" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="0KS-6Z-Mp0"/>
+                <constraint firstItem="HOb-Gh-Xy9" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Jvv-gR-hq1"/>
+                <constraint firstItem="WU5-xI-AHO" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="OUV-fh-23o"/>
+                <constraint firstItem="Msa-X6-Bve" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="PcW-Bw-3DT"/>
+                <constraint firstItem="WU5-xI-AHO" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="QWG-YK-YN8"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="HOb-Gh-Xy9" secondAttribute="bottom" constant="23" id="Rwf-xW-tzt"/>
+                <constraint firstItem="Msa-X6-Bve" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="WWE-4y-bmQ"/>
+                <constraint firstItem="HOb-Gh-Xy9" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="a0s-5q-AP5"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="HOb-Gh-Xy9" secondAttribute="trailing" id="kc9-lV-yut"/>
+                <constraint firstItem="Z73-R5-X6O" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="m4Z-JM-7zR"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-548" y="34"/>
+        </view>
+    </objects>
+</document>

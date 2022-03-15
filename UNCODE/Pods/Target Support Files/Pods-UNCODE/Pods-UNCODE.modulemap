@@ -1,0 +1,6 @@
+module Pods_UNCODE {
+  umbrella header "Pods-UNCODE-umbrella.h"
+
+  export *
+  module * { export * }
+}

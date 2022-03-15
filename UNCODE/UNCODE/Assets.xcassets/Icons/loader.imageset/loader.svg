@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>loader</title>
+    <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="feather-icon" transform="translate(-1137.000000, -392.000000)" stroke="#000000" stroke-width="2">
+            <g id="loader" transform="translate(1138.000000, 393.000000)">
+                <line x1="10" y1="0" x2="10" y2="4" id="Shape"></line>
+                <line x1="10" y1="16" x2="10" y2="20" id="Shape"></line>
+                <line x1="2.93" y1="2.93" x2="5.76" y2="5.76" id="Shape"></line>
+                <line x1="14.24" y1="14.24" x2="17.07" y2="17.07" id="Shape"></line>
+                <line x1="0" y1="10" x2="4" y2="10" id="Shape"></line>
+                <line x1="16" y1="10" x2="20" y2="10" id="Shape"></line>
+                <line x1="2.93" y1="17.07" x2="5.76" y2="14.24" id="Shape"></line>
+                <line x1="14.24" y1="5.76" x2="17.07" y2="2.93" id="Shape"></line>
+            </g>
+        </g>
+    </g>
+</svg>

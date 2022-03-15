@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="21px" height="22px" viewBox="0 0 21 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>power</title>
+    <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="feather-icon" transform="translate(-225.000000, -608.000000)" stroke="#000000" stroke-width="2">
+            <g id="power" transform="translate(226.000000, 609.000000)">
+                <path d="M16.36,4.64 C19.8738743,8.15502187 19.873254,13.8529724 16.3586147,17.3672293 C12.8439753,20.8814861 7.14602471,20.8814861 3.63138533,17.3672293 C0.116745954,13.8529724 0.116125745,8.15502187 3.63,4.64" id="Shape"></path>
+                <line x1="10" y1="0" x2="10" y2="10" id="Shape"></line>
+            </g>
+        </g>
+    </g>
+</svg>

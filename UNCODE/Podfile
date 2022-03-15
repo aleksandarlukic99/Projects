@@ -1,0 +1,10 @@
+# Platform
+platform :ios, '13.2'
+
+# Inhibit all warnings
+inhibit_all_warnings!
+
+target 'UNCODE' do
+    inherit! :search_paths
+    pod 'R.swift'
+end

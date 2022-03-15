@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="18px" viewBox="0 0 22 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>cast</title>
+    <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="feather-icon" transform="translate(-1137.000000, -104.000000)" stroke="#000000" stroke-width="2">
+            <g id="cast" transform="translate(1138.000000, 105.000000)">
+                <path d="M0,12.1 C1.96428873,12.5006048 3.49939523,14.0357113 3.9,16 M0,8.05 C4.18285615,8.51521761 7.48478239,11.8171438 7.95,16 M0,4 L0,2 C0,0.8954305 0.8954305,0 2,0 L18,0 C19.1045695,0 20,0.8954305 20,2 L20,14 C20,15.1045695 19.1045695,16 18,16 L12,16" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>
