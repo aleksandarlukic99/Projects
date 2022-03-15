@@ -43,7 +43,13 @@ class MetabolicTypeView: UIView {
     
     func configureView(with item: MetabolicTypeCellItem.PercentageViewItem) {
         titleLabel.text = item.title
-        detailPercent.text = item.detail
+        detailPercent.text = "\(item.percentage)%"
+        configurePercents(percents: item.percentage)
+    }
+    
+    func configurePercents(percents: Int) {
+        let constraintWidth = (Int(percentView.frame.size.width) / 100) * (100 - percents)
+        percentViewTrailingConstraint.constant = CGFloat(constraintWidth)
     }
 
 }
@@ -54,7 +60,6 @@ private extension MetabolicTypeView {
         Bundle.main.loadNibNamed("MetabolicTypeView", owner: self, options: nil)
         addSubview(backgroundView)
         backgroundView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
-        percentViewTrailingConstraint.constant = 50
         backgroundView.layer
             .cornerRadius(8)
             .masksToBounds(true)

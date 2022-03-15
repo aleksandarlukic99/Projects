@@ -22,9 +22,9 @@ class ViewController: UIViewController {
         CellTypes.metabolicCell(
             .init(
                 dailyRecommendation: 1429,
-                proteinItem: .init(percentage: 30, title: "Protiein", detail: "30%"),
-                carbItem: .init( percentage: 20, title: "Carbohydrates", detail: "20%"),
-                fatItem: .init(percentage: 40, title: "Fat", detail: "40%")
+                proteinItem: .init(percentage: 1, title: "Protiein", detail: ""),
+                carbItem: .init( percentage: 5, title: "Carbohydrates", detail: ""),
+                fatItem: .init(percentage: 10, title: "Fat", detail: "")
             )
         ),
         CellTypes.listCell(
