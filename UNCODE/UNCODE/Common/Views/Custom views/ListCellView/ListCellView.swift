@@ -13,6 +13,9 @@ class ListCellView: UIView {
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var detailLabel: UILabel!
     
+    private let blurEffect = UIBlurEffect(style: .prominent)
+    private lazy var blurEffectView = { UIVisualEffectView(effect: blurEffect) }()
+    
     //MARK: - Inits
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -27,15 +30,7 @@ class ListCellView: UIView {
     //MARK: - Lifecycle
     override func layoutSubviews() {
         super.layoutSubviews()
-        let blurEffect = UIBlurEffect(style: .prominent)
-        let blurEffectView = UIVisualEffectView(effect: blurEffect)
         blurEffectView.frame = listView.bounds
-        blurEffectView
-            .addAsSubviewOf(listView)
-        titleLabel
-            .addAsSubviewOf(listView)
-        detailLabel
-            .addAsSubviewOf(listView)
     }
     
     func configureView(with item: ListCellItem.Item) {
@@ -62,6 +57,12 @@ private extension ListCellView {
             .masksToBounds(true)
         listView
             .backgroundColor(UIColor(red: 255, green: 255, blue: 255, alpha: 0.1))
+        blurEffectView
+            .addAsSubviewOf(listView)
+        titleLabel
+            .addAsSubviewOf(listView)
+        detailLabel
+            .addAsSubviewOf(listView)
     }
     
 }
