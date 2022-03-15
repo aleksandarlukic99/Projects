@@ -74,6 +74,7 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="infoLabel" destination="Lqk-mA-VDP" id="9fI-nb-vmy"/>
+                <outlet property="resultView" destination="GxP-9D-X75" id="O25-wO-l28"/>
                 <outlet property="subtitleLabel" destination="vz1-y1-uZz" id="gsC-g6-lCd"/>
                 <outlet property="titleLabel" destination="eGZ-Q1-8uO" id="s5T-d0-KcS"/>
             </connections>
