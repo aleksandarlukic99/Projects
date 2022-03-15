@@ -15,7 +15,7 @@ class MetabolicTypeView: UIView {
     @IBOutlet private weak var detailPercent: UILabel!
     @IBOutlet private weak var percentViewTrailingConstraint: NSLayoutConstraint!
 
-    private let blurEffect = UIBlurEffect(style: .prominent)
+    private let blurEffect = UIBlurEffect(style: .systemMaterialDark)
     private lazy var blurEffectView = { UIVisualEffectView(effect: blurEffect) }()
 
     private var percentage: Int = 0
@@ -53,8 +53,8 @@ private extension MetabolicTypeView {
         backgroundView.layer
             .cornerRadius(8)
             .masksToBounds(true)
-        backgroundView
-            .backgroundColor(UIColor(red: 255, green: 255, blue: 255, alpha: 0.1))
+        //backgroundView
+        //    .backgroundColor(UIColor(red: 255, green: 255, blue: 255, alpha: 0.01))
         blurEffectView
             .addAsSubviewOf(backgroundView)
         percentView
