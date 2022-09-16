@@ -1,0 +1,32 @@
+{
+  "pins" : [
+    {
+      "identity" : "rxswift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ReactiveX/RxSwift.git",
+      "state" : {
+        "revision" : "b4307ba0b6425c0ba4178e138799946c3da594f8",
+        "version" : "6.5.0"
+      }
+    },
+    {
+      "identity" : "rxtimelane",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/icanzilb/RxTimelane",
+      "state" : {
+        "revision" : "fe5dd4390cfe5a6ee6c1d3f9403765a7a985ee51",
+        "version" : "3.0.2"
+      }
+    },
+    {
+      "identity" : "timelanecore",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/icanzilb/TimelaneCore",
+      "state" : {
+        "revision" : "c554d6d61be14bd7acb8b10161fe5d9dc20d7fbc",
+        "version" : "2.0.2"
+      }
+    }
+  ],
+  "version" : 2
+}
