@@ -42,10 +42,11 @@ class ViewController: UIViewController {
                 let jsonResult = try JSONDecoder().decode(APIResponse.self, from: data)
                 DispatchQueue.main.async {
                     self.results = jsonResult.results
+                    print(self.results)
                     self.collectionView.reloadData()
                 }
             } catch {
-                print(error.localizedDescription)
+                print(error)
                 DispatchQueue.main.async {
                     self.noResultsAction()
                 }

@@ -17,7 +17,7 @@ struct Results: Codable {
     let id: String
     let urls: URLS
     let likes: Int
-    let alt_description: String
+    let alt_description: String?
     let user: User
 }
 
