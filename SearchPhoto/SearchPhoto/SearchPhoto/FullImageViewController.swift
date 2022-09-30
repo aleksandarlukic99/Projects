@@ -39,7 +39,7 @@ class FullImageViewController: UIViewController {
     func updateUI() {
         navigationBar.topItem?.title = "\(results.user.name) post"
         likeLabel.text = "\(results.likes) people like this"
-        descriptionLabel.text = "\(results.user.username): \(results.alt_description)"
+        descriptionLabel.text = "\(results.user.username): \(results.alt_description ?? "No description")"
         usernameLabel.text = results.user.username
         
         //get images
