@@ -107,6 +107,10 @@ extension ViewController: UISearchBarDelegate {
             fetchPhotos(query: text)
         }
     }
+    
+    func position(for bar: UIBarPositioning) -> UIBarPosition {
+        return .topAttached
+    }
 }
 
 extension ViewController: UICollectionViewDelegateFlowLayout {
