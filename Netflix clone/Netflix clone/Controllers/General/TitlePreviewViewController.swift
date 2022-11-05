@@ -10,11 +10,13 @@ import WebKit
 
 class TitlePreviewViewController: UIViewController {
     
+//    MARK: - Properties
+    
     private let titleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = .systemFont(ofSize: 22, weight: .bold)
-        label.text = "Harry potter"
+        label.numberOfLines = 0
         
         return label
     }()
@@ -24,7 +26,6 @@ class TitlePreviewViewController: UIViewController {
         label.font = .systemFont(ofSize: 18, weight: .regular)
         label.translatesAutoresizingMaskIntoConstraints = false
         label.numberOfLines = 0
-        label.text = "Hari kad ga potera"
         
         return label
     }()
@@ -47,6 +48,8 @@ class TitlePreviewViewController: UIViewController {
         
         return webView
     }()
+    
+    //MARK: - Setup View
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -74,14 +77,15 @@ class TitlePreviewViewController: UIViewController {
         
         let titleLabelConstraints = [
             titleLabel.topAnchor.constraint(equalTo: webView.bottomAnchor, constant: 20),
-            titleLabel.leadingAnchor.constraint(equalTo: webView.leadingAnchor, constant: 20)
+            titleLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            titleLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20)
         ]
         NSLayoutConstraint.activate(titleLabelConstraints)
         
         let overviewLabelConstraint = [
             overviewLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 15),
             overviewLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-            overviewLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 20)
+            overviewLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10)
         ]
         NSLayoutConstraint.activate(overviewLabelConstraint)
         
@@ -94,11 +98,15 @@ class TitlePreviewViewController: UIViewController {
         NSLayoutConstraint.activate(downloadButtonConstraint)
     }
     
+    //MARK: - Methods
+    
     func configure(with model: TitlePreviewViewModel) {
         titleLabel.text = model.title
         overviewLabel.text = model.titleOverview
         guard let url = URL(string: "https://www.youtube.com/embed/\(model.youtubeView.id.videoId)") else { return }
         webView.load(URLRequest(url: url))
     }
+    
+    //TODO: - Add download func
     
 }

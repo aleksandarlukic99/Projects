@@ -15,7 +15,6 @@ class HeroHeaderView: UIView {
         let imageView = UIImageView()
         imageView.contentMode = .scaleToFill
         imageView.clipsToBounds = true
-        imageView.image = UIImage(named: "ShrekPoster")
         
         return imageView
     }()
