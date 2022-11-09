@@ -10,7 +10,7 @@ import WebKit
 
 class TitlePreviewViewController: UIViewController {
     
-//    MARK: - Properties
+    //    MARK: - Properties
     
     private let titleLabel: UILabel = {
         let label = UILabel()
@@ -50,7 +50,7 @@ class TitlePreviewViewController: UIViewController {
     }()
     
     //MARK: - Setup View
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -106,7 +106,5 @@ class TitlePreviewViewController: UIViewController {
         guard let url = URL(string: "https://www.youtube.com/embed/\(model.youtubeView.id.videoId)") else { return }
         webView.load(URLRequest(url: url))
     }
-    
-    //TODO: - Add download func
     
 }
