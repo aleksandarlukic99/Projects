@@ -1,0 +1,130 @@
+//
+//  ViewController.swift
+//  LetsChat
+//
+//  Created by aleksandar on 9.11.22..
+//
+
+import UIKit
+
+/*
+ - login screen
+ - channels
+ - message
+ - create new chat, channels
+ - settings
+ */
+
+final class LoginViewController: UIViewController {
+    
+    //MARK: - Properties
+    
+    private let usernameField: UITextField = {
+        let textField = UITextField()
+        textField.placeholder = "Write username..."
+        textField.autocapitalizationType = .none
+        textField.autocorrectionType = .no
+        textField.leftViewMode = .always
+        textField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 50))
+        textField.translatesAutoresizingMaskIntoConstraints = false
+        textField.backgroundColor = .secondarySystemBackground
+        
+        return textField
+    }()
+    
+    private let button: UIButton = {
+        let button = UIButton()
+        button.backgroundColor = .systemGreen
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle("Continue", for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        button.layer.cornerRadius = 8
+        button.layer.masksToBounds = true
+        
+        return button
+    }()
+    
+    //MARK: - View Setup
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+        title = "Let's Talk"
+        view.backgroundColor = .systemBackground
+        view.addSubview(usernameField)
+        view.addSubview(button)
+        button.addTarget(self, action: #selector(didTapContinue), for: .touchUpInside)
+        addConstraints()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        usernameField.becomeFirstResponder()
+        
+        if ChatManager.shared.isSignedIn {
+            presentChatList(animated: false)
+        }
+    }
+    
+    private func addConstraints() {
+        NSLayoutConstraint.activate([
+            usernameField.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 50),
+            usernameField.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor, constant: 50),
+            usernameField.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor, constant: -50),
+            usernameField.heightAnchor.constraint(equalToConstant: 50),
+            button.topAnchor.constraint(equalTo: usernameField.bottomAnchor, constant: 20),
+            button.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 50),
+            button.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -50),
+            button.heightAnchor.constraint(equalToConstant: 50)
+        ])
+    }
+    
+    //MARK: - Methods
+    
+    @objc func didTapContinue() {
+        usernameField.resignFirstResponder()
+        guard let text = usernameField.text, !text.isEmpty else { return }
+        ChatManager.shared.signIn(with: text) { success in
+            guard success else { return }
+        }
+        print("User did log in")
+        //take user to chat list
+        DispatchQueue.main.async {
+            self.presentChatList(animated: true)
+        }
+    }
+    
+    func presentChatList(animated: Bool = true) {
+        
+        guard let vc = ChatManager.shared.createChannelList() else { return }
+        
+        vc.navigationItem.rightBarButtonItem = UIBarButtonItem(
+            barButtonSystemItem: .compose,
+            target: self,
+            action: #selector(didTapCompose))
+        
+        let tabVC = TabBarViewController(chatList: vc)
+        tabVC.modalPresentationStyle = .fullScreen
+        
+        present(tabVC, animated: animated)
+    }
+    
+    @objc private func didTapCompose() {
+        let alert = UIAlertController(
+            title: "New chat",
+            message: "Enter channel name",
+            preferredStyle: .alert)
+        alert.addTextField()
+        alert.addAction(.init(title: "Cancel", style: .cancel))
+        alert.addAction(.init(title: "Create", style: .default, handler: { _ in
+            guard let text = alert.textFields?.first?.text, !text.isEmpty else { return }
+            
+            DispatchQueue.main.async {
+                ChatManager.shared.createNewChannel(name: text)
+            }
+            
+        }))
+        presentedViewController?.present(alert, animated: true)
+    }
+}
+
