@@ -8,7 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet var button1: UIButton!
     @IBOutlet var button2: UIButton!
     @IBOutlet var button3: UIButton!
@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     var countries = [String]()
     var score = 0
     var correctAnswer = 0
+    var questionsAnswered = 0
     
     
     override func viewDidLoad() {
@@ -41,27 +42,37 @@ class ViewController: UIViewController {
         button2.setImage(UIImage(named: countries[1]), for: .normal)
         button3.setImage(UIImage(named: countries[2]), for: .normal)
         
-        title = countries[correctAnswer].uppercased()
-    }
-
-    @IBAction func buttonTapped(_ sender: UIButton) {
-        var title: String
-        
-        if sender.tag == correctAnswer {
-            title = "Correct"
-            score += 1
-        } else {
-            title = "Wrong"
-            score -= 1
-        }
-        
-        let alert = UIAlertController(title: title, message: "Your score is \(score)", preferredStyle: .alert)
-        let alertAction = UIAlertAction(title: "Continue", style: .default) { _ in
-            self.askQuestion()
-        }
-        alert.addAction(alertAction)
-        present(alert, animated: true)
+        title = countries[correctAnswer].uppercased() + " - Score: \(score) / \(questionsAnswered)"
     }
     
+    @IBAction func buttonTapped(_ sender: UIButton) {
+        var alertTitle: String
+        
+        if sender.tag == correctAnswer {
+            alertTitle = "Correct"
+            score += 1
+            questionsAnswered += 1
+        } else {
+            alertTitle = "Wrong, this is flag of \(countries[correctAnswer].uppercased())"
+            score -= 1
+            questionsAnswered += 1
+        }
+        
+        if questionsAnswered == 10 {
+            let alert = UIAlertController(title: "Game over", message: "Your final score is \(score) / \(questionsAnswered)", preferredStyle: .alert)
+            let alertAction = UIAlertAction(title: "Restart", style: .default)
+            score = 0
+            questionsAnswered = 0
+            title = countries[correctAnswer].uppercased() + " - Score: \(score) / \(questionsAnswered)"
+            alert.addAction(alertAction)
+            present(alert, animated: true)
+        } else if questionsAnswered < 10 {
+            let alert = UIAlertController(title: alertTitle, message: "Your score is \(score) / \(questionsAnswered)", preferredStyle: .alert)
+            let alertAction = UIAlertAction(title: "Continue", style: .default) { _ in
+                self.askQuestion()
+            }
+            alert.addAction(alertAction)
+            present(alert, animated: true)
+        }
+    }
 }
-
