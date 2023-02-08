@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>shopping-cart</title>
+    <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="feather-icon" transform="translate(-30.000000, -680.000000)" stroke="#000000" stroke-width="2">
+            <g id="shopping-cart" transform="translate(31.000000, 681.000000)">
+                <circle id="Oval" cx="7" cy="20" r="2"></circle>
+                <circle id="Oval" cx="19" cy="20" r="2"></circle>
+                <path d="M4.67,5 L22,5 L20.32,13.39 C20.131263,14.3402315 19.2886161,15.0185624 18.32,15 L7.75,15 C6.73948144,15.0085708 5.88133579,14.2619841 5.75,13.26 L4.23,1.74 C4.09962224,0.74559587 3.25291357,0.00151855745 2.25,0 L0,0" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

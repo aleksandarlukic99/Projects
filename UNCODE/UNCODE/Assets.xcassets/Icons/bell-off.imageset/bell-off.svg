@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>bell-off</title>
+    <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="feather-icon" transform="translate(-375.000000, -104.000000)" stroke="#000000" stroke-width="2">
+            <g id="bell-off" transform="translate(376.000000, 105.000000)">
+                <path d="M7.56,1.9 C9.72785427,0.676755054 12.3822287,0.696742033 14.5314166,1.95249356 C16.6806045,3.20824508 18.0012714,5.51083976 18.0000009,8 L18.0000009,12 M16,16 L1,16 C2.65685425,16 4,14.6568542 4,13 L4,8 C3.99858824,6.87971462 4.26608007,5.77545348 4.78,4.78 M12.73,20 C12.3722022,20.6168043 11.7130686,20.9964563 11,20.9964563 C10.2869314,20.9964563 9.62779776,20.6168043 9.27,20" id="Shape"></path>
+                <line x1="0" y1="0" x2="22" y2="22" id="Shape"></line>
+            </g>
+        </g>
+    </g>
+</svg>
